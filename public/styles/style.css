@@ -5,3 +5,12 @@ body {
 	background: #9EE1F7
 	
 }
+
+
+.text-area {
+
+	display: inline-block;
+	width: 500px;
+	height: 300px
+
+}
