@@ -7,8 +7,6 @@ function demoer () {
 	console.log("word is: " + word);
 	console.log("word type of: " + partSp);
 
-	word.value = "";
-
 	// alert("the word is ", word , "and it is a", partSp);
 
 	var textArea = document.getElementById("text-area");
