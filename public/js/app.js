@@ -1,15 +1,37 @@
-function demoer () {
+$(document).ready(function() {
+
+	$("#word").
+
+})
+
+
+
+
+
+
+
+
+
+function grammar() {
 
 	var word = document.getElementById("word").value;
 
 	var partSp = document.getElementById("partSp").value;
 
-	console.log("word is: " + word);
-	console.log("word type of: " + partSp);
+	// identify and transform the nouns
+	if(partSp === "noun") {
 
-	// alert("the word is ", word , "and it is a", partSp);
+		if(word.sub)
+
+	}	
+
+
+}
+
+
+
 
 	var textArea = document.getElementById("text-area");
 	textArea.value = word + "\n" + partSp;
 
-}
+
