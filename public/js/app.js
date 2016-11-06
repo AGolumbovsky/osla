@@ -30,19 +30,19 @@ function transform() {
 
 	var partSp = document.getElementById("partSp").value;
 
-	var content = document.getElementById("text-area").value;
+	var content = document.getElementById("text-area");
 
 	if(partSp === "noun") {
 
 		if(lastLetter === "a") {
 
-			content = word;
+			content.value = word;
 
 		}
 
 		else {
 
-			content = word + "a";
+			content.value = word + "a";
 
 		}
 
@@ -52,17 +52,51 @@ function transform() {
 
 		if(lastTwoLetters === "al") {
 
-			content = word;
+			content.value = word;
 
 		}
 
 		else {
 
-			content = word + "al";
+			content.value = word + "al";
 
 		}
 
 	}
+
+	else if(partSp === "adjective") {
+
+			if(lastTwoLetters === "iv") {
+
+				content.value = word;
+
+			}
+
+			else {
+
+				content.value = word + "iv";
+
+			}
+
+	}
+
+	else if(partSp === "pronoun") {
+
+		if(lastTwoLetters === "o") {
+
+			content.value = word;
+
+		}
+
+		else {
+
+			content.value = word + "o";
+
+		}
+
+	}
+
+
 
 
 	return content;
