@@ -1,0 +1,61 @@
+
+// alphabet
+
+["a", "i", "o", "e", "u", "l", "v", "n", "m", "s", "k", "r", "c", "t", "b", "p", "f", "g", "z", "x", "wildcard"]
+
+
+// main parts of speech
+
+{
+
+	// object or noun => what
+	"obiekt": "-a",
+
+	// state or adjective => what kind
+	"stata": "-iv",
+
+	// function or verb => to do what
+	"funkcia": {
+
+		"presenta": "-al",
+		"pasta": "-alo",
+		"futura": "-ale"
+
+	},		
+
+	// propoerty or adverb => how
+	"properta": "-o"
+
+}
+
+
+// simplified English equivalents
+
+{
+
+	"pronouns": {
+
+		"I": "on",
+		"you": "an",
+		"he": "en"
+
+	},
+
+	"prepostions": {
+
+		"at": "ir",
+		"above": "er",
+		"below": "or"
+
+	},
+
+	"conjunctions": {
+
+		"and": "i", 
+		"or": "o", 
+		"but": "a",
+		"If": "e"
+
+	}
+
+}
