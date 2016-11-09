@@ -1,24 +1,3 @@
-/*
-
-function grammar() {
-
-	var word = document.getElementById("word").value;
-
-	var partSp = document.getElementById("partSp").value;
-
-	// identify and transform the nouns
-	if(partSp === "noun") {
-
-		if(word.sub)
-
-	}	
-
-
-}
-
-*/ 
-
-
 
 function transform() {
 
@@ -101,4 +80,9 @@ function transform() {
 
 	return content;
 
+}
+
+function Word() {
+
+	
 }

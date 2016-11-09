@@ -36,26 +36,30 @@
 	"pronouns": {
 
 		"I": "on",
-		"you": "an",
-		"he": "en"
+		"you": "en",
+		"he": "an"
 
 	},
 
 	"prepostions": {
 
-		"at": "ir",
-		"above": "er",
-		"below": "or"
+		"at": "in",
+		"above": "on",
+		"below": "un"
 
 	},
 
 	"conjunctions": {
 
+		// for, and, nor, but, or, yet, so
 		"and": "i", 
 		"or": "o", 
 		"but": "a",
-		"If": "e"
+		"If": "e",
+		"reserved": "u"
 
 	}
 
 }
+
+
