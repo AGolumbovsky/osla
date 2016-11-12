@@ -1,4 +1,11 @@
 
+function clearTextBox () {
+
+	var theBox = document.getElementById("word");
+	theBox.value = "";
+
+}
+
 function transform() {
 
 	var word = document.getElementById("word").value;
@@ -9,19 +16,22 @@ function transform() {
 
 	var partSp = document.getElementById("partSp").value;
 
-	var content = document.getElementById("text-area");
+	var content = document.getElementById("content");
 
+	// change the word's ending according to its part of speech
 	if(partSp === "noun") {
 
 		if(lastLetter === "a") {
 
-			content.value = word;
+			content.innerHTML = word;
+			clearTextBox();
 
 		}
 
 		else {
 
-			content.value = word + "a";
+			content.innerHTML = word + "a";
+			clearTextBox();
 
 		}
 
@@ -31,13 +41,16 @@ function transform() {
 
 		if(lastTwoLetters === "al") {
 
-			content.value = word;
+			content.innerHTML = word;
+			clearTextBox();
 
 		}
 
 		else {
 
-			content.value = word + "al";
+			content.innerHTML = word + "al";
+			clearTextBox();
+
 
 		}
 
@@ -47,29 +60,37 @@ function transform() {
 
 			if(lastTwoLetters === "iv") {
 
-				content.value = word;
+				content.innerHTML = word;
+				clearTextBox();
+
 
 			}
 
 			else {
 
-				content.value = word + "iv";
+				content.innerHTML = word + "iv";
+				clearTextBox();
+
 
 			}
 
 	}
 
-	else if(partSp === "pronoun") {
+	else if(partSp === "adverb") {
 
 		if(lastTwoLetters === "o") {
 
-			content.value = word;
+			content.innerHTML = word;
+			clearTextBox();
+
 
 		}
 
 		else {
 
-			content.value = word + "o";
+			content.innerHTML = word + "o";
+			clearTextBox();
+
 
 		}
 
@@ -80,9 +101,4 @@ function transform() {
 
 	return content;
 
-}
-
-function Word() {
-
-	
 }
