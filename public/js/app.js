@@ -19,49 +19,53 @@ function transform() {
 	var content = document.getElementById("content");
 
 	// change the word's ending according to its part of speech
+
+	// if noun
 	if(partSp === "noun") {
 
 		if(lastLetter === "a") {
 
 			content.innerHTML = word;
-			clearTextBox();
+			// clearTextBox();
 
 		}
 
 		else {
 
 			content.innerHTML = word + "a";
-			clearTextBox();
+			// clearTextBox();
 
 		}
 
 	}
 
+	// if verb
 	else if(partSp === "verb") {
 
 		if(lastTwoLetters === "al") {
 
 			content.innerHTML = word;
-			clearTextBox();
+			// clearTextBox();
 
 		}
 
 		else {
 
 			content.innerHTML = word + "al";
-			clearTextBox();
+			// clearTextBox();
 
 
 		}
 
 	}
 
+	// if adjective
 	else if(partSp === "adjective") {
 
 			if(lastTwoLetters === "iv") {
 
 				content.innerHTML = word;
-				clearTextBox();
+				// clearTextBox();
 
 
 			}
@@ -69,19 +73,20 @@ function transform() {
 			else {
 
 				content.innerHTML = word + "iv";
-				clearTextBox();
+				// clearTextBox();
 
 
 			}
 
 	}
 
+	// if adverb
 	else if(partSp === "adverb") {
 
 		if(lastTwoLetters === "o") {
 
 			content.innerHTML = word;
-			clearTextBox();
+			// clearTextBox();
 
 
 		}
@@ -89,16 +94,13 @@ function transform() {
 		else {
 
 			content.innerHTML = word + "o";
-			clearTextBox();
+			// clearTextBox();
 
 
 		}
 
 	}
 
-
-
-
-	return content;
+	return clearTextBox();
 
 }
