@@ -64,8 +64,24 @@
 
 		"this": "id",
 		"that": "od",
+
 		"what": "ke",
 		"where/when": "ko" // kot --> time;  ko* --> space
+
+	},
+
+	"vectors": {
+
+		"to": "ko",
+		"from": "ok",
+		"over": "oko" // make not dependent on "to" and "from"
+
+	},
+
+	"yesOrNo": {
+
+		"yes": "da",
+		"no": "ka"
 
 	}
 
