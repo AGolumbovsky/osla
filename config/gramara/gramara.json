@@ -9,7 +9,7 @@
 {
 
 	// object or noun => what
-	"obiekt": "-a",
+	"obiekta": "-a",
 
 	// state or adjective => what kind
 	"stata": "-iv",
@@ -45,7 +45,9 @@
 
 		"at": "at",
 		"above": "ot",
-		"below": "ut"
+		"below": "ut",
+		"before / in front": "ant",
+		"after / past": "post"
 
 	},
 
@@ -66,7 +68,10 @@
 		"that": "od",
 
 		"what": "ke",
-		"where/when": "ko" // kot --> time;  ko* --> space
+		"where/when": "ko", // kot --> time;  ko* --> space
+		
+		"more": "mas",
+		"less": "les"
 
 	},
 
