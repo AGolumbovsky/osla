@@ -18,6 +18,21 @@ function transform() {
 
 	var content = document.getElementById("content");
 
+
+	// below is just a test run
+	// works only on the first char in word
+
+	var conflictLetter = "c"; 
+
+	var resolveLetter = "k";
+
+	var conflict = word.search(conflictLetter);
+
+	word = word.replace(word[conflict], resolveLetter);
+
+	console.log(conflictLetter, resolveLetter, conflict, word);
+
+
 	// change the word's ending according to its part of speech
 
 	// if noun
