@@ -19,18 +19,12 @@ function transform() {
 	var content = document.getElementById("content");
 
 
-	// below is just a test run
-	// works only on the first char in word
+	// first test of RegEx
+	// needs to be separated into own module
+	
+	var c = /c|ck/g; // "ck" results in "kk"
 
-	var conflictLetter = "c"; 
-
-	var resolveLetter = "k";
-
-	var conflict = word.search(conflictLetter);
-
-	word = word.replace(word[conflict], resolveLetter);
-
-	console.log(conflictLetter, resolveLetter, conflict, word);
+	word = word.replace(c, "k");
 
 
 	// change the word's ending according to its part of speech
