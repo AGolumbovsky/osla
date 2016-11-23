@@ -1,4 +1,3 @@
-
 var bodyParser = require('body-parser');
 var OsulaDB = require('../models/osulaModel');
 
