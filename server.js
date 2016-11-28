@@ -14,7 +14,9 @@ var port = process.env.PORT || 8888;
 // serve static files
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect('mongodb://localhost'); // localhost/myApp
+mongoose.connect('mongodb://localhost/OsulaDB'); // localhost/myApp
+
+var OsulaDB = mongoose.connection; // sam pridumal, nado proverit'
 
 // listen to port
 app.listen(port, function() {

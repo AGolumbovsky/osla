@@ -4,7 +4,7 @@ var OsulaDB = require('../models/osulaModel');
 module.exports = function(app) {
 
     app.use(bodyParser.json());
-    app.use(bodyParser.urlencoded({ extended: true }));
+    // app.use(bodyParser.urlencoded({ extended: true }));
 
     // get ALL
     app.get('/api/dict', function(req, res) {
