@@ -8,7 +8,7 @@ var osulaSchema = new Schema({
     partSp: String, 
     description: String
 
-})
+});
 
 var OsulaDB = mongoose.model('OsulaDB', osulaSchema);
 
