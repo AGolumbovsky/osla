@@ -4,6 +4,7 @@ var mongoose = require('mongoose');
 
 // require local modules
 var apiController = require('./api/controllers/apiController');
+var Dict = require('./api/models/dictModel');
 
 // initialize app
 var app = express();
@@ -14,9 +15,9 @@ var port = process.env.PORT || 8888;
 // serve static files
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect('mongodb://localhost/OsulaDB'); // localhost/myApp
+mongoose.connect('mongodb://127.0.0.1/dictDB'); // localhost/myApp vs 127.0.0.1 xy knows...
 
-var OsulaDB = mongoose.connection; // sam pridumal, nado proverit'
+var Word = mongoose.connection; // sam pridumal, nado proverit'
 
 // listen to port
 app.listen(port, function() {

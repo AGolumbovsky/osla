@@ -2,7 +2,7 @@ var mongoose = require('mongoose');
 
 var Schema = mongoose.Schema;
 
-var osulaSchema = new Schema({
+var wordSchema = new Schema({
 
     word: String, 
     partSp: String, 
@@ -10,6 +10,7 @@ var osulaSchema = new Schema({
 
 });
 
-var OsulaDB = mongoose.model('OsulaDB', osulaSchema);
+// create a model for words
+var Dict = mongoose.model('Dict', wordSchema);
 
-module.exports = OsulaDB;
+module.exports = Dict;
