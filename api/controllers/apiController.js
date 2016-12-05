@@ -9,15 +9,12 @@ module.exports = function(app) {
     // get ALL
     app.get('/api/dict', function(req, res) {
 
-        console.log("app.get in progress...")
-
         Word.find({}, function(err, data) {
 
             if (err) throw err;
 
             res.send(data);
 
-            console.log("Here is the list of words: " + data[0]);
         })
 
     });
@@ -31,8 +28,6 @@ module.exports = function(app) {
 
             res.send(data);
 
-            console.log("Found word: " + data)
-
         })
 
     })
@@ -43,16 +38,14 @@ module.exports = function(app) {
         var newWord = new Word({
 
             spelling: req.body.spelling,
-            partSp: "testPartSp", 
-            description: "t ass t ... t ass t ..."
+            partSp: req.body.partSp, 
+            description: req.body.description
 
         });
 
         newWord.save(function(err, data) {
 
             if(err) throw err;
-
-            console.log("your word is safe with mongoose");
 
             res.send(data);
 

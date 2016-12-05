@@ -21,7 +21,7 @@ var db = mongoose.connection; // sam pridumal, nado proverit'
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
-  console.log("this shit wowrks at least");
+  console.log("db connected, mongoose did it");
 });
 
 // act like you have a clue
