@@ -15,7 +15,8 @@ var port = process.env.PORT || 8888;
 // serve static files
 app.use(express.static(__dirname + '/public'));
 
-mongoose.connect('mongodb://127.0.0.1/dictDB'); // localhost/myApp vs 127.0.0.1 xy knows...
+// mongoose.connect('mongodb://127.0.0.1/dictDB'); // localhost/myApp vs 127.0.0.1 xy knows...
+mongoose.connect('mongodb://agolumbovsky:ko00KO))@ds119768.mlab.com:19768/osula')
 
 var db = mongoose.connection; // sam pridumal, nado proverit'
 
