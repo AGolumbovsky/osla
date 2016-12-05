@@ -1,5 +1,5 @@
 var bodyParser = require('body-parser');
-var Dict = require('../models/dictModel');
+var Word = require('../models/wordModel');
 
 module.exports = function(app) {
 
@@ -10,7 +10,8 @@ module.exports = function(app) {
     app.get('/api/dict', function(req, res) {
 
         console.log("app.get in progress...")
-        Dict.find({}, function(err, data) {
+
+        Word.find({}, function(err, data) {
 
             if (err) throw err;
 
@@ -24,7 +25,7 @@ module.exports = function(app) {
     // get one
     app.get('/api/dict/:word', function(req, res) {
 
-        Dict.findById({ _id: req.params.word }, function(err, data) {
+        Word.findOne({"spelling": req.params.spelling }, function(err, data) {
 
             if(err) throw err;
 
@@ -38,20 +39,26 @@ module.exports = function(app) {
 
     // post to db
     app.post('/api/add', function(req, res) {
-        
-        /*
-        var newWord = OsulaDB({
-            word: "testTest", 
-            partSp: req.body.partSp, 
-            description: req.body.description
-        })
+     
+        var newWord = new Word({
 
-        newWord.save(function(err) {
+            spelling: req.body.spelling,
+            partSp: "testPartSp", 
+            description: "t ass t ... t ass t ..."
 
-            res.send("Great success POST");
-        }) */
+        });
 
-    })
+        newWord.save(function(err, data) {
+
+            if(err) throw err;
+
+            console.log("your word is safe with mongoose");
+
+            res.send(data);
+
+        });
+
+    });
 
     // delete one
     app.delete('/api/dict/:word', function(req, res) {
@@ -60,7 +67,7 @@ module.exports = function(app) {
         // do it differently
         var allThatsLeftOfIt = req.body.thing;
 
-        Dict.find({ "word": req.body.word }).remove(function(err) {
+        Word.find({ "wordspelling": req.body.word }).remove(function(err) {
 
             if(err) throw err;
 

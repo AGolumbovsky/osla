@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 // require local modules
 var apiController = require('./api/controllers/apiController');
-var Dict = require('./api/models/dictModel');
+var Dict = require('./api/models/wordModel');
 
 // initialize app
 var app = express();
@@ -17,7 +17,15 @@ app.use(express.static(__dirname + '/public'));
 
 mongoose.connect('mongodb://127.0.0.1/dictDB'); // localhost/myApp vs 127.0.0.1 xy knows...
 
-var Word = mongoose.connection; // sam pridumal, nado proverit'
+var db = mongoose.connection; // sam pridumal, nado proverit'
+
+db.on('error', console.error.bind(console, 'connection error:'));
+db.once('open', function() {
+  console.log("this shit wowrks at least");
+});
+
+// act like you have a clue
+apiController(app);
 
 // listen to port
 app.listen(port, function() {

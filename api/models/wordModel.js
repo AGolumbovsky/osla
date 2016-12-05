@@ -4,13 +4,13 @@ var Schema = mongoose.Schema;
 
 var wordSchema = new Schema({
 
-    word: String, 
+    spelling: String, 
     partSp: String, 
     description: String
 
 });
 
 // create a model for words
-var Dict = mongoose.model('Dict', wordSchema);
+var Word = mongoose.model('Word', wordSchema);
 
-module.exports = Dict;
+module.exports = Word;
