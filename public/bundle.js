@@ -60,13 +60,16 @@
 
 	var Main = __webpack_require__(216);
 	var About = __webpack_require__(218);
+	var AddWord = __webpack_require__(219);
+
 	ReactDOM.render(React.createElement(
 	  Router,
 	  { history: hashHistory },
 	  React.createElement(
 	    Route,
 	    { path: '/', component: Main },
-	    React.createElement(Route, { path: 'about', component: About })
+	    React.createElement(Route, { path: 'about', component: About }),
+	    React.createElement(Route, { path: 'addWord', component: AddWord })
 	  )
 	), document.getElementById('app'));
 
@@ -24893,12 +24896,17 @@
 	        React.createElement(
 	            IndexLink,
 	            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	            ' See Whatsup '
+	            ' Dictionary '
 	        ),
 	        React.createElement(
 	            Link,
 	            { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
 	            ' About '
+	        ),
+	        React.createElement(
+	            Link,
+	            { to: '/addWord', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	            ' Add Word '
 	        )
 	    );
 	};
@@ -24922,6 +24930,28 @@
 	};
 
 	module.exports = About;
+
+/***/ },
+/* 219 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(1);
+
+	var AddWord = function AddWord(props) {
+	    return React.createElement(
+	        'div',
+	        null,
+	        React.createElement(
+	            'h3',
+	            null,
+	            ' Add Word Component '
+	        )
+	    );
+	};
+
+	module.exports = AddWord;
 
 /***/ }
 /******/ ]);
