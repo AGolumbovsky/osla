@@ -24896,17 +24896,17 @@
 	        React.createElement(
 	            IndexLink,
 	            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	            ' Dictionary '
+	            ' --Dictionary-- '
 	        ),
 	        React.createElement(
 	            Link,
 	            { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	            ' About '
+	            ' --About-- '
 	        ),
 	        React.createElement(
 	            Link,
 	            { to: '/addWord', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	            ' Add Word '
+	            ' --Add Word-- '
 	        )
 	    );
 	};
@@ -24925,7 +24925,7 @@
 	    return React.createElement(
 	        'h3',
 	        null,
-	        ' About Component '
+	        ' --About Component-- '
 	    );
 	};
 
@@ -24946,7 +24946,7 @@
 	        React.createElement(
 	            'h3',
 	            null,
-	            ' Add Word Component '
+	            '--Add Word Component-- '
 	        )
 	    );
 	};
