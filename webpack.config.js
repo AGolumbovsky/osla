@@ -25,6 +25,8 @@ module.exports = {
       Main: 'app/components/Main.jsx',
       Nav: 'app/components/Nav.jsx',
       About: 'app/components/About.jsx',
+      Dictionary: 'app/components/Dictionary',
+      SearchForm: 'app/components/SearchForm',
       AddWord: 'app/components/AddWord.jsx'
     },
     extensions: ['', '.js', '.jsx']
