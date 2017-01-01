@@ -24941,32 +24941,74 @@
 	    Link = _require.Link,
 	    IndexLink = _require.IndexLink;
 
-	var Nav = function Nav() {
-	    return React.createElement(
-	        'div',
-	        null,
-	        React.createElement(
-	            'h2',
-	            null,
-	            'Nav Componenet'
-	        ),
-	        React.createElement(
-	            IndexLink,
-	            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	            ' --Dictionary-- '
-	        ),
-	        React.createElement(
-	            Link,
-	            { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	            ' --About-- '
-	        ),
-	        React.createElement(
-	            Link,
-	            { to: '/addWord', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	            ' --Add Word-- '
-	        )
-	    );
-	};
+	var Nav = React.createClass({
+	    displayName: 'Nav',
+
+	    onSearch: function onSearch(e) {
+	        e.preventDefault();
+	        alert("keep calm and new year!!!");
+	    },
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            { className: 'top-bar' },
+	            React.createElement(
+	                'div',
+	                { className: 'top-bar-left' },
+	                React.createElement(
+	                    'ul',
+	                    { className: 'top-bar-left' },
+	                    React.createElement(
+	                        'h2',
+	                        null,
+	                        'Nav Componenet'
+	                    ),
+	                    React.createElement(
+	                        IndexLink,
+	                        { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                        ' --Dictionary-- '
+	                    ),
+	                    React.createElement(
+	                        Link,
+	                        { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                        ' --About-- '
+	                    ),
+	                    React.createElement(
+	                        Link,
+	                        { to: '/addWord', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                        ' --Add Word-- '
+	                    )
+	                )
+	            ),
+	            React.createElement(
+	                'div',
+	                null,
+	                React.createElement(
+	                    'div',
+	                    { className: 'top-bar-right' },
+	                    React.createElement(
+	                        'form',
+	                        { onSubmit: this.onSearch },
+	                        React.createElement(
+	                            'ul',
+	                            null,
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement('input', { type: 'search', placeholder: 'search or smth' })
+	                            ),
+	                            React.createElement(
+	                                'li',
+	                                null,
+	                                React.createElement('input', { type: 'submit', className: 'button', value: 'bored?' })
+	                            )
+	                        )
+	                    )
+	                )
+	            )
+	        );
+	    }
+	});
 
 	module.exports = Nav;
 
