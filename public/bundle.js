@@ -24957,26 +24957,38 @@
 	                { className: 'top-bar-left' },
 	                React.createElement(
 	                    'ul',
-	                    { className: 'top-bar-left' },
+	                    { className: 'menu' },
 	                    React.createElement(
-	                        'h2',
+	                        'li',
+	                        { className: 'menu-text' },
+	                        'Osla app'
+	                    ),
+	                    React.createElement(
+	                        'li',
 	                        null,
-	                        'Nav Componenet'
+	                        React.createElement(
+	                            IndexLink,
+	                            { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                            'Dictionary'
+	                        )
 	                    ),
 	                    React.createElement(
-	                        IndexLink,
-	                        { to: '/', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                        ' --Dictionary-- '
+	                        'li',
+	                        null,
+	                        React.createElement(
+	                            Link,
+	                            { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                            'About'
+	                        )
 	                    ),
 	                    React.createElement(
-	                        Link,
-	                        { to: '/about', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                        ' --About-- '
-	                    ),
-	                    React.createElement(
-	                        Link,
-	                        { to: '/addWord', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
-	                        ' --Add Word-- '
+	                        'li',
+	                        null,
+	                        React.createElement(
+	                            Link,
+	                            { to: '/addWord', activeClassName: 'active', activeStyle: { fontWeight: 'bold' } },
+	                            'Add Word'
+	                        )
 	                    )
 	                )
 	            ),
@@ -24991,7 +25003,7 @@
 	                        { onSubmit: this.onSearch },
 	                        React.createElement(
 	                            'ul',
-	                            null,
+	                            { className: 'menu' },
 	                            React.createElement(
 	                                'li',
 	                                null,

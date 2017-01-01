@@ -10,17 +10,17 @@ var Nav = React.createClass({
         return(
             <div className="top-bar">
                 <div className="top-bar-left">
-                    <ul className="top-bar-left">
-                        <h2>Nav Componenet</h2>
-                        <IndexLink to="/" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}> --Dictionary-- </IndexLink>
-                        <Link to="/about" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}> --About-- </Link>
-                        <Link to="/addWord" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}> --Add Word-- </Link>
+                    <ul className="menu">
+                        <li className="menu-text">Osla app</li>
+                        <li><IndexLink to="/" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Dictionary</IndexLink></li>
+                        <li><Link to="/about" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>About</Link></li>
+                        <li><Link to="/addWord" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Add Word</Link></li>
                     </ul>
                 </div>
                 <div>
                     <div className="top-bar-right">
                         <form onSubmit={this.onSearch}>
-                            <ul>
+                            <ul className="menu">
                                 <li>
                                     <input type="search" placeholder="search or smth"/>
                                 </li>
