@@ -7,6 +7,10 @@ var Main = require('Main');
 var About = require('About');
 var AddWord = require('AddWord');
 
+// load foundation
+require('style!css!foundation-sites/dist/css/foundation.min.css')
+$(document).foundation();
+
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>

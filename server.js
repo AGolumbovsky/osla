@@ -12,6 +12,17 @@ var app = express();
 // define port
 var port = process.env.PORT || 8887;
 
+// redirect to http
+// for heroku
+app.use(function (req, res, next) {
+  if(req.headers['x-forwarded-proto'] === 'https') {
+    res.redirect('http://' + req.hostname + req, url);
+  }
+  else {
+    next();
+  }
+});
+
 // serve static files
 app.use(express.static(__dirname + '/public'));
 
