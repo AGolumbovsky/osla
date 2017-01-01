@@ -45,7 +45,7 @@ db.once('open', function() {
 apiController(app);
 
 // listen to port
-app.listen(port, function() {
+app.listen(PORT, function() {
 
 	console.log("osula express listening,port " + PORT);
 	
