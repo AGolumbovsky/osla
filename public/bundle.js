@@ -107,6 +107,7 @@
 
 
 	var Main = __webpack_require__(223);
+	var Dictionary = __webpack_require__(231);
 	var About = __webpack_require__(225);
 	var AddWord = __webpack_require__(226);
 
@@ -120,6 +121,7 @@
 	  React.createElement(
 	    Route,
 	    { path: '/', component: Main },
+	    React.createElement(Route, { path: 'dictionary', componenet: Dictionary }),
 	    React.createElement(Route, { path: 'about', component: About }),
 	    React.createElement(Route, { path: 'addWord', component: AddWord })
 	  )
@@ -25417,6 +25419,83 @@
 			URL.revokeObjectURL(oldSrc);
 	}
 
+
+/***/ },
+/* 231 */
+/***/ function(module, exports, __webpack_require__) {
+
+	'use strict';
+
+	var React = __webpack_require__(8);
+
+	// local modules
+	var SearchForm = __webpack_require__(232);
+
+	var Dictionary = React.createClass({
+	    displayName: 'Dictionary',
+
+
+	    getInitialState: function getInitialState() {
+	        return {
+	            isLoading: false
+	        };
+	    },
+	    handleSearch: function handleSearch() {
+	        alert("handleSearch Happy New Year!!!!");
+	    },
+	    render: function render() {
+	        return React.createElement(
+	            'div',
+	            null,
+	            React.createElement(
+	                'h3',
+	                null,
+	                'Dictionary Component'
+	            ),
+	            React.createElement(SearchForm, { onSearch: this.handleSearch })
+	        );
+	    }
+	});
+
+	module.exports = Dictionary;
+
+/***/ },
+/* 232 */
+/***/ function(module, exports, __webpack_require__) {
+
+	"use strict";
+
+	var React = __webpack_require__(8);
+
+	var SearchForm = React.createClass({
+	    displayName: "SearchForm",
+
+	    onFormSubmit: function onFormSubmit(e) {
+	        e.preventDefault();
+
+	        var word = this.refs.word.value;
+
+	        this.props.onSearch(word);
+	    },
+	    render: function render() {
+	        return React.createElement(
+	            "div",
+	            null,
+	            React.createElement(
+	                "form",
+	                { onSubmit: this.onFormSubmit },
+	                React.createElement("input", { type: "text", ref: "word" }),
+	                React.createElement(
+	                    "button",
+	                    null,
+	                    "Find"
+	                )
+	            )
+	        );
+	    }
+	});
+
+	module.exports = SearchForm;
 
 /***/ }
 /******/ ]);
