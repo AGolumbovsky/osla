@@ -1,11 +1,16 @@
 var React = require('react');
 
-var Dictionary = (props) => {
-    return (
-        <div>
-            <h3>--Dictionary Component-- </h3>
-        </div>
-    )
-}
+var DictionaryForm = require('DictionaryForm');
+
+var Dictionary = React.createClass({
+    render: function() {
+        return (
+            <div>
+                <h2 className="text-center page-title"> Search Dictionary</h2>
+                <DictionaryForm/>
+            </div>
+        )
+    }
+})
 
 module.exports = Dictionary;
