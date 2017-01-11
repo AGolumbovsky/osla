@@ -12,6 +12,9 @@ var AddWord = require('AddWord');
 require('style!css!foundation-sites/dist/css/foundation.min.css')
 $(document).foundation();
 
+// app css
+require('style!css!sass!applicationStyles');
+
 ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
@@ -19,6 +22,7 @@ ReactDOM.render(
       <Route path="dictionary" componenet={Dictionary}/>
       <Route path="about" component={About}/>
       <Route path="addWord" component={AddWord}/>
+      <IndexRoute component={Dictionary}/>
 
     </Route>
   </Router>,

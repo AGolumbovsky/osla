@@ -9,14 +9,14 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/AGolumbovsky/osula.git"
+    "url": "git+https://github.com/AGolumbovsky/osla.git"
   },
   "author": "andriy golumbovsky",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/AGolumbovsky/osula/issues"
+    "url": "https://github.com/AGolumbovsky/osla/issues"
   },
-  "homepage": "https://github.com/AGolumbovsky/osula#readme",
+  "homepage": "https://github.com/AGolumbovsky/osla#readme",
   "dependencies": {
     "body-parser": "^1.15.2",
     "express": "^4.14.0",
@@ -34,8 +34,10 @@
     "css-loader": "^0.23.1",
     "foundation-sites": "^6.2.0",
     "jquery": "^2.2.1",
+    "node-sass": "^4.1.1",
     "script-loader": "^0.6.1",
-    "style-loader": "^0.13.0",    
+    "style-loader": "^0.13.0",
+    "sass-loader": "^4.1.1",    
     "nodemon": "^1.11.0",
     "webpack": "^1.12.13"
   }

@@ -27,7 +27,8 @@ module.exports = {
       About: 'app/components/About.jsx',
       Dictionary: 'app/components/Dictionary.jsx',
       SearchForm: 'app/components/SearchForm.jsx',
-      AddWord: 'app/components/AddWord.jsx'
+      AddWord: 'app/components/AddWord.jsx',
+      applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']
   },
@@ -42,5 +43,6 @@ module.exports = {
         exclude: /(node_modules|bower_components)/
       }
     ]
-  }
+  },
+  devtool: 'cheap-module-eval-source-map'
 };
