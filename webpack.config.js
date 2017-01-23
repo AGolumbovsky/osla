@@ -19,17 +19,13 @@ module.exports = {
     path: __dirname,
     filename: './public/bundle.js'
   },
-  resolve: {
+    resolve: {
     root: __dirname,
+    modulesDirectories: [
+      'node_modules',
+      './app/components'
+    ],
     alias: {
-      Main: 'app/components/Main.jsx',
-      Nav: 'app/components/Nav.jsx',
-      About: 'app/components/About.jsx',
-      Dictionary: 'app/components/Dictionary.jsx',
-      SearchForm: 'app/components/SearchForm.jsx',
-      WordInfo: 'app/components/WordInfo.jsx',
-      SearchForm: 'app/components/SearchForm.jsx',
-      AddWord: 'app/components/AddWord.jsx',
       applicationStyles: 'app/styles/app.scss'
     },
     extensions: ['', '.js', '.jsx']

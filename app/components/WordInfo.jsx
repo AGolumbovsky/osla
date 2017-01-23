@@ -1,10 +1,16 @@
 var React = require('react');
 
-var WordInfo = ({word, description}) => {
-    return(
-
-        <h3 className="text-center"> The word is: {word} , descripttion: {description}</h3>
-    );
-};
+var WordInfo = React.createClass({
+	render: function() {
+		var {word, description} = this.props;
+		
+		return (
+			<div>
+				word: {word} 
+				Description: {description}
+			</div>
+		);
+	}
+});
 
 module.exports = WordInfo;
