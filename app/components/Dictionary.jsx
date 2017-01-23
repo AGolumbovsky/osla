@@ -10,10 +10,14 @@ var Dictionary = React.createClass({
         }
     },
     handleSearch: function(word, description) {
+
+
         this.setState({
+            isLoading: true,
             word: "Bird Bird the word",
             description: "Second description"
-        })
+        });
+       
     },
     render: function() {
 
