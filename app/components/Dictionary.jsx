@@ -10,12 +10,10 @@ var Dictionary = React.createClass({
         }
     },
     handleSearch: function(word, description) {
-        //var self = this;
         this.setState({
-            word: "Bird",
-            description: "description description fasdfadsdew qrefaqr>1345refaqr>"
+            word: "Bird Bird the word",
+            description: "Second description"
         })
-
     },
     render: function() {
 
