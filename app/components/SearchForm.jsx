@@ -4,10 +4,11 @@ var DictionaryForm = React.createClass ({
     onFormSubmit: function(e) {
         e.preventDefault();
         
+        var word = "stupid string";
         console.log(word);
 
         if(word.length > 0) {
-            this.refs.word.value = "";
+          
             this.props.onSearch(word);
         }
     },

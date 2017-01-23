@@ -9,7 +9,6 @@ var About = require('About');
 var AddWord = require('AddWord');
 
 // load foundation
-require('style!css!foundation-sites/dist/css/foundation.min.css')
 $(document).foundation();
 
 // app css
