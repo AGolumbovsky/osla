@@ -9,26 +9,26 @@ var Dictionary = React.createClass({
             isLoading: false
         }
     },
-    handleSearch: function(word) {
-        alert("searched! now what?");
-        var self = this;
-        self.setState({
-            wordis: "worddddddd"
+    handleSearch: function(word, description) {
+        //var self = this;
+        this.setState({
+            word: "Bird",
+            description: "description description fasdfadsdew qrefaqr>1345refaqr>"
         })
 
     },
     render: function() {
 
-       var word = "ass";
+       var {word} = this.state;
 
         return (
             <div>
                 <h2 className="text-center page-title"> Search Dictionary</h2>
                 <SearchForm onSearch={this.handleSearch}/>
-                <WordInfo word={this.state.word}/>
+                <WordInfo word={this.state.word} description={this.state.description} />
             </div>
-        )
+        );
     }
-})
+});
 
 module.exports = Dictionary;
