@@ -6,8 +6,8 @@ var TestUtils = require('react-addons-test-utils');
 
 var AddWord = require('AddWord');
 
-decribe('AddWord', () => {
+describe('AddWord', () => {
     it('should exist', () => {
-        expect(Clock).toExist();
+        expect(AddWord).toExist();
     })
 })
