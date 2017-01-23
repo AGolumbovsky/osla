@@ -9,7 +9,7 @@ var DictionaryForm = React.createClass ({
 
         if(word.length > 0) {
             this.refs.word.value = "";
-           // this.props.onSearch(word);
+            this.props.onSearch(word);
         }
     },
     render: function() {

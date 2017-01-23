@@ -26,7 +26,8 @@ module.exports = {
       Nav: 'app/components/Nav.jsx',
       About: 'app/components/About.jsx',
       Dictionary: 'app/components/Dictionary.jsx',
-      DictionaryForm: 'app/components/DictionaryForm.jsx',
+      SearchForm: 'app/components/SearchForm.jsx',
+      WordInfo: 'app/components/WordInfo.jsx',
       SearchForm: 'app/components/SearchForm.jsx',
       AddWord: 'app/components/AddWord.jsx',
       applicationStyles: 'app/styles/app.scss'

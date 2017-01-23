@@ -43,9 +43,13 @@ db.once('open', function() {
 // act like you have a clue
 apiController(app);
 
+// create a timestamp for nodemon
+var currentDate = new Date();
+var timestamp = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
+
 // listen to port
 app.listen(PORT, function() {
 
-	console.log("osla express listening,port " + PORT);
+	console.log("osla express listening,port " + PORT + '/n' + timestamp);
 	
 });
