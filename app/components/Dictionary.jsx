@@ -3,7 +3,6 @@ var React = require('react');
 var SearchForm = require('SearchForm');
 var WordList = require('WordList'); 
 var WordInfo = require('WordInfo');
-var AddWord = require('AddWord');
 
 var Dictionary = React.createClass({
     getInitialState: function() {
@@ -32,9 +31,7 @@ var Dictionary = React.createClass({
 		   ]
         };
     },
-	handleAddWord: function(word) {
-		alert("new word" + word)
-	},
+	
     handleSearch: function(word, description) {
 
 
@@ -54,7 +51,7 @@ var Dictionary = React.createClass({
                 <h2 className="text-center page-title"> Search Dictionary</h2>
                 <SearchForm onSearch={this.handleSearch}/>
 				<WordList words={words}/>
-				<AddWord onAddWord={this.handleAddWord}/>
+				
             </div>
         );
     }

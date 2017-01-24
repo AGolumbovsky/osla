@@ -1,25 +1,16 @@
 var React = require('react');
 
-var AddWord = React.createClass({
-    handleSubmit: function(e) {
-        e.preventDefault();
-        var word = this.refs.word.value;
+var AddWordForm = require('AddWordForm');
 
-        if(word.length > 0) {
-            this.refs.word.value = 'ddd';
-            this.props.onAddWord(word);
-        }
-        else {
-            this.refs.word.focus();
-        }
-    },
+var AddWord = React.createClass({
+    handleAddWord: function(word) {
+		alert("new word is: " + word);
+	},   
     render: function() {
-        return (
+        return(
             <div>
-                <form onSubmit={this.handleSubmit}>
-                    <input type="text" ref="word" placeholder="Enter the word to ass"/>
-                    <button className="button expanded"> Add Word </button>
-                </form>
+                <h2 className="text-center page-title"> Search Dictionary</h2>
+                <AddWordForm onAddWord={this.handleAddWord}/>
             </div>
         );
     }

@@ -13,8 +13,8 @@ var Nav = React.createClass({
                     <ul className="menu">
                         <li className="menu-text">OSLa app</li>
                         <li><IndexLink to="/" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Dictionary</IndexLink></li>
-                        <li><Link to="/about" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>About</Link></li>
                         <li><Link to="/addWord" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Add Word</Link></li>
+                        <li><Link to="/about" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>About</Link></li>
                     </ul>
                 </div>
                 <div>
