@@ -29,7 +29,7 @@ app.use(express.static(__dirname + '/public'));
 
  mongoose.connect('mongodb://127.0.0.1/dictDB'); // localhost/myApp vs 127.0.0.1 xy knows...
 
-// !!!! comes from *** heroku config --app osula | grep MONGODB_URI  ***
+// !!!! comes from *** heroku config --app osla | grep MONGODB_URI  ***
  // mongoose.connect('mongodb://heroku_618862tq:f0r1abdib4he2t56ij1v9qs10l@ds153637.mlab.com:53637/heroku_618862tq');
 
 
@@ -50,6 +50,6 @@ var timestamp = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + 
 // listen to port
 app.listen(PORT, function() {
 
-	console.log("osla express listening,port " + PORT + '/n' + timestamp);
+	console.log("osla express listening, port " + PORT + '/n' + timestamp);
 	
 });

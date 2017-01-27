@@ -5,8 +5,9 @@ var {Route, Router, IndexRoute, hashHistory} = require('react-router');
 // require local modules
 var Main = require('Main');
 var Dictionary = require('Dictionary');
-var About = require('About');
+var Story = require('Story');
 var AddWord = require('AddWord');
+var Contact = require('Contact');
 
 // load foundation
 $(document).foundation();
@@ -20,8 +21,9 @@ ReactDOM.render(
 
       
       <Route path="addWord" component={AddWord}/>
+      <Route path="story" component={Story}/>
+      <Route path="contact" component={Contact}/>
       <IndexRoute component={Dictionary}/>
-      <Route path="about" component={About}/>
 
     </Route>
   </Router>,
