@@ -19,11 +19,10 @@ ReactDOM.render(
   <Router history={hashHistory}>
     <Route path="/" component={Main}>
 
-      
+      <IndexRoute component={Dictionary}/>
       <Route path="addWord" component={AddWord}/>
       <Route path="story" component={Story}/>
       <Route path="contact" component={Contact}/>
-      <IndexRoute component={Dictionary}/>
 
     </Route>
   </Router>,

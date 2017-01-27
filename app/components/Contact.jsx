@@ -9,3 +9,5 @@ var Contact = React.createClass({
        );
    } 
 });
+
+module.exports = Contact;
