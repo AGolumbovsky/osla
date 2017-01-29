@@ -15,6 +15,7 @@ var Nav = React.createClass({
                         <li><IndexLink to="/" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Dictionary</IndexLink></li>
                         <li><Link to="/addWord" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Add Word</Link></li>
                         <li><Link to="/story" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Story</Link></li>
+						<li><Link to="/grammar" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Grammar</Link></li>
                         <li><Link to="/contact" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Contact & Contribute</Link></li>
                     </ul>
                 </div>
