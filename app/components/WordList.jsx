@@ -9,7 +9,7 @@ var WordList = React.createClass ({
 		var renderWords = () => {
 			return words.map((word) => {
 				return (
-					<WordInfo key={word.id} {...word}/>
+					<WordInfo key={word.id} {...word} />
 				);
 			});
 		};
