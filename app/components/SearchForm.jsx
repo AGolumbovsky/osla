@@ -4,7 +4,7 @@ var DictionaryForm = React.createClass ({
     onFormSubmit: function(e) {
         e.preventDefault();
         
-        var word = "stupid string";
+        var word = this.refs.searchText.value;
         console.log(word);
 
         if(word.length > 0) {
@@ -16,7 +16,7 @@ var DictionaryForm = React.createClass ({
         return(
             <div>
                 <form onSubmit={this.onFormSubmit}>
-                    <input type="search" placeholder="enter word" onChange={this.handleSearchChange}/>
+                    <input type="search" ref="searchText" placeholder="enter word" onChange={this.handleSearchChange}/>
                     <button className="button expanded hollow"> Find in Dictionary </button>
                 </form>
             </div>

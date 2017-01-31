@@ -1,4 +1,4 @@
-# osla
+ffosla
 Open Source Language/Grammar
 
 Features:
@@ -61,21 +61,21 @@ All singular nouns(what) end with -a, all plural end with -i
 Stress is always on the *next to the last syllabus
 .okeana // ocean // pronounced okeAna
 
-All adjectives(which) end with -iv
-Stress is always on the last syllabus
-.boniv // good, beautiful whatever..
+All adjectives(which), property of noun end with -e
+Stress is on the one before last syllabus
+.bone // good, beautiful whatever..
 
 All verbs(to do) end with -al
 .dal // to do, do
 .bal // to be, am/is
 .dormal // to sleep, do/does sleep
 
-All adverbs(how) end with -o****
+All adverbs(how), property of verb end with -o****
 .[ru]ohuienno // well
 
 Pronouns (temporarily) are
 os // I 
-as // you
+as // you // will sound like "ass", something needs to be done here
 es // it, she, ...
 
 __Location and Direction (same for all chapters):
@@ -85,13 +85,13 @@ on // on, on top
 un // under, below
 
 to // to, in the direction, pertaining
-ot // away, in the opposite direction
+oto // away, in the opposite direction
 
-onto // onto, on top of
-into // into, inside
-onot // off, not on
-inot // out, out of, outside
-unod // from below, underneath
+onto // onto, on top of (direction)
+into // into, inside (directtion)
+onot // off, not on (position)
+inot // out, out of, outside (position)
+unod // from below, underneath ??
 
 __Time:
 
@@ -108,12 +108,13 @@ gerund ends with -da -- doing or ba -- being
 __Not yet categorized:
 
 o // or
-a // is, but (accepted as "yes")
+a // is, but (accepted as "yes" or "but")
 ka // no, not, not TRUE
--as // > // more so ex: mas // more
--es // < // less so ex: les // less
+-k- in the end of word is loosely reserved for negation // kbal = not be, ***ka
+-as // > // more so // ex: mas = more
+-es // < // less so // ex: les = less
 <> // opposite
--t // relation to, ***'s
+-t // relation to, =***'s, positioned within
 e // front, forward
 et // in front, at the front 
 u // back, backward
@@ -124,14 +125,22 @@ ed // this
 __Exampes:
 
 .bona // beauty
-.boniv // beautiful
-.boniva // beautiful(person, thing) "hey, gorgeous"
-.bonivo // beautifully
+.bone // beautiful
+.bonea // beautiful(person, thing) "hey, gorgeous"
+.bono // beautifully
 .bonel // to beautify, to embellish
 .bonela // embellishment, e.g. jewelry
 .bonelda // to be beautifying, to be embellishing
 .bonba // being beautiful
 .bonelba // ~struck by beauty ????
+__
+__Increasing Complexity:
+
+os ose(male), osa(female), osi(we), osai(we, girls)
+lef(left), lefa(left side, "leftity"), lefot(to the left from), lefto(to the left of)
+os(I, me), ost(to me, me), osit(us, to us), osait(us, to us, girls)
+.ast eforti kto // your efforts are "nivpizdunivkrasnuarmiyu"
+
 
 __Dictionary(Core):
 
@@ -141,22 +150,25 @@ raf* // right
 obiekta // object
 funktia // function
 persona // person
+aval // to have
+valida // strongness, strongdoinness, (maybe effort...)
 Vodka // Vodka
 
 
-__
-__Increasing Complexity:
 
-os ose(male), osa(female), osi(we), osai(we, girls)
-lef(left), lefa(left side, "leftity"), lefot(to the left from), lefto(to the left of)
-os(I, me), ost(to me, me), osit(us, to us), osait(us, to us, girls)
+__Scrap:
 
-
-
-
+who/what
+kakoy
+kotoriy
+how
+where/when
 
 
-
-
-
+can/could
+will/would
+shall/should
+have to
+may/might
+must
 
