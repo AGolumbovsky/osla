@@ -41,7 +41,7 @@ var WordList = React.createClass ({
 	},
     
     render: function() {
-		var {words} = this.props;
+		var {words} = this.state;
 		var renderWords = () => {
 			return words.map((word) => {
 				return (
