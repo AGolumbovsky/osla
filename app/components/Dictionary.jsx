@@ -20,7 +20,7 @@ var Dictionary = React.createClass({
     handleSearch: function(word, description) {
 
         this.setState({
-            word: word,
+            spelling: word,
             description: description
         });
        

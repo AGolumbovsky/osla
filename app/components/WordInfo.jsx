@@ -2,11 +2,13 @@ var React = require('react');
 
 var WordInfo = React.createClass({
 	render: function() {
-		var {word, description} = this.props;
+		var {id, spelling, description} = this.props;
 		
 		return (
 			<div>
-				word: {word} 
+				id: {id}
+				Word: {spelling} 
+				<div>--------</div>
 				Description: {description}
 			</div>
 		);
