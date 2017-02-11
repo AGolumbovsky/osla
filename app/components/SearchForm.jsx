@@ -5,7 +5,7 @@ var DictionaryForm = React.createClass ({
         e.preventDefault();
         
         var word = this.refs.searchText.value;
-        console.log(word);
+        console.log("you looking for", word + "?");
 
         if(word.length > 0) {
           
