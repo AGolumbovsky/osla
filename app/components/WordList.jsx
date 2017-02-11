@@ -10,18 +10,18 @@ var WordList = React.createClass ({
 			words: [
 				{
 					id: uuid(),
-					spelling: "once",
+					spelling: "uno",
 					description: "in the galaxy far far away"
 				},
 				{
 					id: uuid(),
-					spelling: "twice",
-					description: "old spice"
+					spelling: "dos",
+					description: "two two two"
 				},
 				{
 					id: uuid(),
-					spelling: "three",
-					description: "segodnya bolshe ne kuri"
+					spelling: "tres",
+					description: "three three"
 				}
 			]
 		};
@@ -45,7 +45,7 @@ var WordList = React.createClass ({
 		var renderWords = () => {
 			return words.map((word) => {
 				return (
-					<WordInfo key={word.id} {...word} />
+					<WordInfo key={word.spelling} {...word} />
 				);
 			});
 		};

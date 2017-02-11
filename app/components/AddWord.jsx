@@ -5,8 +5,9 @@ var WordInfo = require('WordInfo');
 
 var AddWord = React.createClass({
     handleAddWord: function(word) {
-		alert("new word is: " + word);
+		// go ahead and do the POST request 
 	},   
+    
     render: function() {
         return(
             <div>

@@ -4,11 +4,13 @@ var expect = require('expect');
 var $ = require('jQuery');
 var TestUtils = require('react-addons-test-utils');
 
-var AddWord = require('AddWord');
+var Dictionary = require('Dictionary');
 
-describe('AddWord', () => {
+describe('Dictionary', () => {
 	
     it('should exist', () => {
-        expect(AddWord).toExist();
-    })
+        expect(Dictionary).toExist();
+    });
+
+
 })

@@ -24,7 +24,7 @@ ReactDOM.render(
       <Route path="addWord" component={AddWord}/>
       <Route path="story" component={Story}/>
       <Route path="contact" component={Contact}/>
-	  <Route path="grammar" component={Grammar}/>
+	    <Route path="grammar" component={Grammar}/>
 
     </Route>
   </Router>,

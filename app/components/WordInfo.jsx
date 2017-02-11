@@ -6,9 +6,8 @@ var WordInfo = React.createClass({
 		
 		return (
 			<div>
-				id: {id}
+				id: tooLong
 				Word: {spelling} 
-				<div>--------</div>
 				Description: {description}
 			</div>
 		);
