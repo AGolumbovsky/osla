@@ -19,20 +19,6 @@ var Nav = React.createClass({
                         <li><Link to="/contact" activeClassName="active" activeStyle={{ fontWeight: 'bold' }}>Contact & Contribute</Link></li>
                     </ul>
                 </div>
-                <div>
-                    <div className="top-bar-right">
-                        <form onSubmit={this.onSearch}>
-                            <ul className="menu">
-                                <li>
-                                    <input type="search" placeholder="search or smth"/>
-                                </li>
-                                <li>
-                                    <input type="submit" className="button" value="bored?"/>
-                                </li>
-                            </ul>
-                        </form>
-                    </div>
-                </div>
             </div>
         );
     }
