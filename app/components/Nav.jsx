@@ -6,6 +6,7 @@ var Nav = React.createClass({
         e.preventDefault();
         alert("keep calm and new year!!!");
     },
+
     render: function() {
         return(
             <div className="top-bar">
@@ -22,6 +23,6 @@ var Nav = React.createClass({
             </div>
         );
     }
-})
+});
 
-module.exports = Nav;
+module.exports = Nav; 

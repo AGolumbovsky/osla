@@ -1,6 +1,9 @@
 var React = require('react');
+// import React from 'react';
 var ReactDOM = require('react-dom');
+// import ReactDOM from 'react-dom';
 var {Route, Router, IndexRoute, hashHistory} = require('react-router');
+// import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 
 // require local modules
 var Main = require('Main');
