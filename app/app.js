@@ -1,23 +1,20 @@
-var React = require('react');
-// import React from 'react';
- var ReactDOM = require('react-dom');
-//import ReactDOM from 'react-dom';
-var {Route, Router, IndexRoute, hashHistory} = require('react-router');
-// import { Route, Router, IndexRoute, hashHistory } from 'react-router';
-
+import React from 'react';
+import ReactDOM from 'react-dom';
+import { Route, Router, IndexRoute, hashHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers';
 
 // require local modules
-var Main = require('Main');
-var Dictionary = require('Dictionary');
-var Story = require('Story');
-var AddWord = require('AddWord');
-var Contact = require('Contact');
-var Grammar = require('Grammar');
+import Main from 'Main';
+import Dictionary from 'Dictionary';
+import Story from 'Story';
+import AddWord from 'AddWord';
+import Contact from 'Contact';
+import Grammar from 'Grammar';
 
+// don't know what this is.... find out 
 const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
@@ -25,7 +22,7 @@ const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENS
 $(document).foundation();
 
 // app css
-require('style!css!sass!applicationStyles');
+import'style!css!sass!applicationStyles';
 
 ReactDOM.render(
   <Provider store={store}>
