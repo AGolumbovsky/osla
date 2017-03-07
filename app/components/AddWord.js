@@ -1,7 +1,7 @@
 var React = require('react');
 
 var AddWordForm = require('AddWordForm');
-var WordInfo = require('WordInfo');
+var Word = require('Word');
 
 var AddWord = React.createClass({
     handleAddWord: function(word) {
@@ -13,7 +13,7 @@ var AddWord = React.createClass({
             <div>
                 <h2 className="text-center page-title"> Search Dictionary</h2>
                 <AddWordForm onAddWord={this.handleAddWord}/>
-                <WordInfo/>
+                <Word/>
             </div>
         );
     }

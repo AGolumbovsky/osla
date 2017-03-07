@@ -1,44 +1,54 @@
-var React = require('react');
-var axios = require('axios');
+import React, { Component, PropTypes } from 'react';
+import { connect } from 'react-redux';
+import { recordsFetchData } from 'actions/records';
 
-var SearchForm = require('SearchForm');
-var WordList = require('WordList'); 
-var WordInfo = require('WordInfo');
+class RecordList extends Component {
+	componentDidMount() {
+		this.props.fetchData('api');
+	}
 
-var Dictionary = React.createClass({
-    getInitialState: function() {
-        return {
-           words: [
-			   {
-				   id: 1,
-				   word: "Uno",
-				   description: "It means One in Spanish, it almost certainly means 'asshole' in some other language"
-			   }
-		   ]
-        };
-    },
-	
-    handleSearch: function(word, description) {
+	render() {
+		if(this.props.hasErrored) {
+			return <p>My bad</p>
+		}
 
-        this.setState({
-            spelling: word,
-            description: description
-        });
-       
-    },
-    render: function() {
+		if(this.props.isLoading) {
+			return <p> Please Loading Wait </p>
+		}
 
-       var {words} = this.state;
+		return (
+			<ul>
+				{this.props.records.map((record) => (
+					<li key={record.id}>
+						{record.word}	
+					</li>
+				))}
+			</ul>
+		);
 
-        return (
-            <div>
-                <h2 className="text-center page-title"> Search Dictionary</h2>
-                <SearchForm onSearch={this.handleSearch}/>
-				<WordList words={words}/>
-				
-            </div>
-        );
-    }
-});
+	}
+}
 
-module.exports = Dictionary;
+RecordList.propTypes = {
+	fetchData: PropTypes.func,
+	records: PropTypes.array,
+	hasErrored: PropTypes.bool,
+	isLoading: PropTypes.bool
+
+};
+
+const mapStateToProps = (state) => {
+	return {
+		records: state.records,
+		hasErrored: state.recordsHasErrored,
+		isLoading: state.recordsIsLoading
+	}
+};
+
+const mapDispatchToProps = (dispatch) => {
+	return {
+		fetchData: (uri) => dispatch(recordsFetchData(uri))
+	}
+};
+
+export default connect(mapStateToProps, mapDispatchToProps)(RecordList);

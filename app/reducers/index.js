@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import recordReducer from './record';
+import { records, recordsHasErrored, recordsIsLoading } from './records'
 
-var rootReducer = combineReducers({
-	record: recordReducer
-	// make some some
+
+export default combineReducers({
+	records,
+	recordsHasErrored,
+	recordsIsLoading
 });
-
-export default rootReducer;

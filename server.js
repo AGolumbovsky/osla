@@ -10,7 +10,7 @@ var Dict = require('./api/models/wordModel');
 var app = express();
 
 // define port
-const PORT = process.env.PORT || 8887;
+const PORT = process.env.PORT || 8886;
 
 // redirect to http
 // for heroku

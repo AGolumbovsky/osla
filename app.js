@@ -14,13 +14,12 @@ import AddWord from 'AddWord';
 import Contact from 'Contact';
 import Grammar from 'Grammar';
 
-const middleware = [thunk];
-const createStoreWithMiddleware = applyMiddleware(...middleware)(createStore);
+// don't know what this is.... find out 
+const createStoreWithMiddleware = applyMiddleware(thunk)(createStore);
 const store = createStoreWithMiddleware(reducers, window.__REDUX_DEVTOOLS_EXTENSION__ && window.__REDUX_DEVTOOLS_EXTENSION__());
 
 // load foundation
 $(document).foundation();
-
 // app css
 import'style!css!sass!applicationStyles';
 

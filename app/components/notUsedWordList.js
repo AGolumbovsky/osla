@@ -1,7 +1,7 @@
 var React = require('react');
 var uuid = require('node-uuid');
 
-var WordInfo = require('WordInfo');
+var Word = require('Word');
 
 var WordList = React.createClass ({
 	
@@ -33,7 +33,7 @@ var WordList = React.createClass ({
 				...this.state.words,
 				{
 					id: uuid(),
-					spelling: "hello",
+					word: "hello",
 					description: "say hello to my little friend"
 				}
 			]
@@ -45,7 +45,7 @@ var WordList = React.createClass ({
 		var renderWords = () => {
 			return words.map((word) => {
 				return (
-					<WordInfo key={word.spelling} {...word} />
+					<Word key={word.word} {...word} />
 				);
 			});
 		};

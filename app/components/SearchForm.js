@@ -1,6 +1,7 @@
 var React = require('react');
 
-var DictionaryForm = React.createClass ({
+var SearchForm = React.createClass ({
+
     onFormSubmit: function(e) {
         e.preventDefault();
         
@@ -12,6 +13,7 @@ var DictionaryForm = React.createClass ({
             this.props.onSearch(word);
         }
     },
+
     render: function() {
         return(
             <div>
@@ -24,4 +26,4 @@ var DictionaryForm = React.createClass ({
     }
 });
 
-module.exports = DictionaryForm;
+module.exports = SearchForm;
