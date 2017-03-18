@@ -2,9 +2,9 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 import { recordsFetchData } from 'actions/records';
 
-class RecordList extends Component {
+class Dictionary extends Component {
 	componentDidMount() {
-		this.props.fetchData('api');
+		this.props.fetchData('/api');
 	}
 
 	render() {
@@ -29,7 +29,7 @@ class RecordList extends Component {
 	}
 }
 
-RecordList.propTypes = {
+Dictionary.propTypes = {
 	fetchData: PropTypes.func,
 	records: PropTypes.array,
 	hasErrored: PropTypes.bool,
