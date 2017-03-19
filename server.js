@@ -49,7 +49,7 @@ var timestamp = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + 
 
 // listen to port
 app.listen(PORT, function() {
-
-	console.log("osla express listening, port " + PORT + '/n' + timestamp);
 	
+	console.log("osla express listening, port " + PORT + '/n' + timestamp);
+
 });

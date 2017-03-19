@@ -1,6 +1,8 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
+
 import { recordsFetchData } from 'actions/records';
+import Record from 'Record';
 
 class Dictionary extends Component {
 	componentDidMount() {
@@ -17,8 +19,10 @@ class Dictionary extends Component {
 		}
 
 		return (
+			<Records/>
 			<ul>
 				{this.props.records.map((record) => (
+					console.log("the record is", record)
 					<li key={record.id}>
 						{record.word}	
 					</li>

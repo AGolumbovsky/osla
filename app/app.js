@@ -9,9 +9,7 @@ import reducers from './reducers';
 // require local modules
 import Main from 'Main';
 import Dictionary from 'Dictionary';
-import Story from 'Story';
 import AddWord from 'AddWord';
-import Contact from 'Contact';
 import Grammar from 'Grammar';
 
 const middleware = [thunk];
