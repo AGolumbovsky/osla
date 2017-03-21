@@ -1,13 +1,6 @@
-const INIT_STATE = []
+const INIT_STATE =  [{word: "nada to see here"}, {id: 999}];
 
 import { FIND_RECORD } from '../actions';
-
-/*export default (state = INIT_STATE, action) => {
-	switch (action.type) {
-		default: 
-			return state;
-	}
-}*/
 
 export function recordsHasErrored(state = false, action) {
 	switch (action.type) {
@@ -27,7 +20,7 @@ export function recordsIsLoading(state = false, action) {
 	}
 }
 
-export function records(state = [{word: "nada to see here"}], action) {
+export const records = (state = INIT_STATE, action) => {
 	switch (action.type) {
 		case 'RECORDS_FETCH_DATA_SUCCESS':
 			return action.records;

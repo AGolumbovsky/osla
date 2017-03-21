@@ -1,6 +1,6 @@
 import React from 'react';
 
-var Word = React.createClass({
+var Details = React.createClass({
 	render: function() {
 		var {id, word, description} = this.props;
 		
@@ -14,4 +14,4 @@ var Word = React.createClass({
 	}
 });
 
-module.exports = Word;
+module.exports = Details;

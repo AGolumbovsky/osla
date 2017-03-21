@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { addRecord } from '../actions';
 
-export class Records extends Component {
+export class RecordsList extends Component {
 	renderList = () => {
 
 		const { records } = this.props;
