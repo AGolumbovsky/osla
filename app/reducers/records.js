@@ -27,7 +27,7 @@ export function recordsIsLoading(state = false, action) {
 	}
 }
 
-export function records(state = [], action) {
+export function records(state = [{word: "nada to see here"}], action) {
 	switch (action.type) {
 		case 'RECORDS_FETCH_DATA_SUCCESS':
 			return action.records;
