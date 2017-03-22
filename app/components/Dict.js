@@ -1,10 +1,10 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import { recordsFetchData } from 'actions/records';
-import RecordsList from 'components';
+// import { recordsFetchData } from 'recordsFetchData';
+import RecList from 'RecList';
 
-class Dictionary extends Component {
+class Dict extends Component {
 	componentDidMount() {
 		this.props.fetchData('/api');
 	}
@@ -19,21 +19,22 @@ class Dictionary extends Component {
 		}
 
 		return (
-			<RecordsList/>
-			<ul>
-				{this.props.records.map((record) => (
-					console.log("the record is", record)
-					<li key={record.id}>
-						{record.word}	
-					</li>
-				))}
-			</ul>
+			<div>
+				<RecList/>
+				<ul>
+					{this.props.records.map((record) => (
+						<li key={record.id}>
+							{record.word}	
+						</li>
+					))}
+				</ul>
+			</div>
 		);
 
 	}
 }
 
-Dictionary.propTypes = {
+Dict.propTypes = {
 	fetchData: PropTypes.func,
 	records: PropTypes.array,
 	hasErrored: PropTypes.bool,
@@ -55,4 +56,4 @@ const mapDispatchToProps = (dispatch) => {
 	}
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(RecordList);
+export default connect(mapStateToProps, mapDispatchToProps)(RecList);

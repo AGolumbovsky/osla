@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addRecord } from '../actions';
+import { addRec } from '../actions';
 
-export class RecordsList extends Component {
+export class RecList extends Component {
 	renderList = () => {
 
 		const { records } = this.props;
@@ -27,4 +27,4 @@ const mapStateToProps = (reduxState) => ({
 	records: reduxState.records
 })
 
-export default connect(mapStateToProps)(records)
+export default connect(mapStateToProps)(RecList)

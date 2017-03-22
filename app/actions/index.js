@@ -1,12 +1,12 @@
-export const FIND_RECORD = 'FIND_RECORD';
-export const ADD_RECORD = 'ADD_RECORD';
-export const REMOVE_RECORD = 'REMOVE_RECORD';
-export const RECORD_HAS_ERRORED = 'RECORD_HAS_ERRORED';
+export const FIND_REC = 'FIND_REC';
+export const ADD_REC = 'ADD_REC';
+export const REMOVE_REC = 'REMOVE_REC';
+export const REC_HAS_ERRORED = 'REC_HAS_ERRORED';
 
 
 export function recordsHasErrored(bool) {
 	return {
-		type: RECORD_HAS_ERRORED,
+		type: REC_HAS_ERRORED,
 		hasErrored: bool
 	}
 }
@@ -65,18 +65,18 @@ export function recordsFetchData(uri) {
 	}
 }
 
-export const addRecord = (record) => {
+export const addRec = (record) => {
 	return (dispatch, getState) => {
 
 
 		dispatch({
-			type: ADD_RECORD,
+			type: ADD_REC,
 			payload: record
 		})
 	}
 }
 
-export const removeRecord = (word) => ({
-	type: REMOVE_RECORD,
+export const removeRec = (word) => ({
+	type: REMOVE_REC,
 	payload: word
 })

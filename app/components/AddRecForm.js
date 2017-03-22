@@ -1,8 +1,8 @@
-var React = require('react');
+import React from 'react';
 
-var AddWord = require('AddWord');
+import AddRec from 'AddRec';
 
-var AddWordForm = React.createClass({
+var AddRecForm = React.createClass({
     handleSubmit: function(e) {
         e.preventDefault();
         var word = this.refs.word.value;
@@ -28,4 +28,4 @@ var AddWordForm = React.createClass({
     }
 });
 
-module.exports = AddWordForm;
+module.exports = AddRecForm;

@@ -8,8 +8,8 @@ import reducers from './reducers';
 
 // require local modules
 import Main from 'Main';
-import Dictionary from 'Dictionary';
-import AddWord from 'AddWord';
+import Dict from 'Dict';
+import AddRec from 'AddRec';
 import Grammar from 'Grammar';
 
 const middleware = [thunk];
@@ -28,8 +28,8 @@ ReactDOM.render(
     <Router history={hashHistory}>
       <Route path="/" component={Main}>
 
-        <IndexRoute component={Dictionary}/>
-        <Route path="addWord" component={AddWord}/>
+        <IndexRoute component={Dict}/>
+        <Route path="addWord" component={AddRec}/>
   	    <Route path="grammar" component={Grammar}/>
 
       </Route>
