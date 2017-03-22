@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 
-import { records, recordsHasErrored, recordsIsLoading } from './records'
+import { recs, recsHasErrored, recsIsLoading } from 'recs'
 
 
 export default combineReducers({
-	records,
-	recordsHasErrored,
-	recordsIsLoading
+	recs,
+	recsHasErrored,
+	recsIsLoading
 });

@@ -26,11 +26,9 @@ app.use(function (req, res, next) {
 // serve static files
 app.use(express.static(__dirname + '/public'));
 
-
- mongoose.connect('mongodb://127.0.0.1/dictDB'); // localhost/myApp vs 127.0.0.1 xy knows...
-
 // !!!! comes from *** heroku config --app osla | grep MONGODB_URI  ***
- // mongoose.connect('mongodb://heroku_618862tq:f0r1abdib4he2t56ij1v9qs10l@ds153637.mlab.com:53637/heroku_618862tq');
+// mongoose.connect('mongodb://heroku_618862tq:f0r1abdib4he2t56ij1v9qs10l@ds153637.mlab.com:53637/heroku_618862tq');
+mongoose.connect('mongodb://127.0.0.1/dictDB');
 
 
 var db = mongoose.connection; // sam pridumal, nado proverit'

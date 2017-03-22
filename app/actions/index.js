@@ -1,27 +1,25 @@
-export const FIND_REC = 'FIND_REC';
-export const ADD_REC = 'ADD_REC';
-export const REMOVE_REC = 'REMOVE_REC';
-export const REC_HAS_ERRORED = 'REC_HAS_ERRORED';
+import * as c from 'actionTypes';
 
 
-export function recordsHasErrored(bool) {
+export const recsIsLoading = (bool) => {
 	return {
-		type: REC_HAS_ERRORED,
-		hasErrored: bool
-	}
-}
-
-export function recordsIsLoading(bool) {
-	return {
-		type: 'RECORDS_IS_LOADING',
+		type: c.RECS_IS_LOADING,
 		isLoading: bool
 	}
 }
 
-export function recordsFetchDataSuccess(records) {
+export const recsHasErrored = (bool) => {
 	return {
-		type: 'RECORDS_FETCH_DATA_SUCCESS',
-		records
+		type: c.RECS_HAS_ERRORED,
+		hasErrored: bool
+	}
+}
+
+
+export const recsFetchDataSuccess = (recs) => {
+	return {
+		type: c.RECS_FETCH_DATA_SUCCESS,
+		recs
 	}
 }
 
@@ -46,29 +44,30 @@ export function recordsFetchDataSuccess(records) {
 	}
 }*/
 
-export function recordsFetchData(uri) {
+export recsFetchData = (uri) => {
+
 	return (dispatch) => {
-		dispatch(recordsIsLoading(true));
+		dispatch(recsIsLoading(true));
+		console.log("recsFetchData is working")
 
 		fetch(uri)
-			.then((response) => {
-				if(!response.ok) {
+			.then((res) => {
+				if(!res.ok) {
 					throw Error(response.statusText);
 				}
-				dispatch(recordsIsLoading(false));
+				dispatch(recsIsLoading(false));
 
-				return response;
+				return res;
 			})
-			.then((response) => response.json())
-			.then((records) => dispatch(recordsFetchData(records)))
-			.catch(() => dispatch(recordsHasErrored(true)));
+			.then((res) => res.json())
+			.then((recs) => dispatch(recsFetchDataSuccess(recs)))
+			.catch(() => dispatch(recsHasErrored(true)));
 	}
 }
 
-export const addRec = (record) => {
+export const addRec = (rec) => {
+
 	return (dispatch, getState) => {
-
-
 		dispatch({
 			type: ADD_REC,
 			payload: record

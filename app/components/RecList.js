@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-import { addRec } from '../actions';
 
 export class RecList extends Component {
-	renderList = () => {
 
-		const { records } = this.props;
-		return records.map((record) => (
-			<li	key={record.id}>
-				<span>{record.word}</span>
+	renderList = () => {
+		const { recs } = this.props;
+		return recs.map((rec) => (
+			<li	key={rec.id}>
+				<h4> { rec.word } </h4>
+				<h5> { rec.description } </h5>
 			</li>
 		))
 	}
@@ -20,11 +20,11 @@ export class RecList extends Component {
 			</ul>
 		)
 	}
-		
+
 }
 
 const mapStateToProps = (reduxState) => ({
-	records: reduxState.records
+	recs: reduxState.recs
 })
 
 export default connect(mapStateToProps)(RecList)
