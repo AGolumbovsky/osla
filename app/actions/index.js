@@ -53,7 +53,7 @@ export const recsFetchData = (uri) => {
 		fetch(uri)
 			.then((res) => {
 				if(!res.ok) {
-					throw Error(response.statusText);
+					throw Error(res.statusText);
 				}
 				dispatch(recsIsLoading(false));
 				return res;

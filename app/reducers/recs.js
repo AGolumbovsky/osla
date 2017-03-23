@@ -22,8 +22,7 @@ export const recsHasErrored = (state = false, action) => {
 export const recs = (state = [{word: "test_deflt"}, {id: 999}], action) => {
 	switch (action.type) {
 		case c.RECS_FETCH_DATA_SUCCESS:
-			// return action.recs;
-			return [{"test": "test"}]
+			return action.recs
 		default:
 			return state;
 	}

@@ -7,9 +7,9 @@ import Details from 'Details';
 import { recsFetchData } from '../actions';
 
 export class Dict extends Component {
-	componentWillMount() {
-		console.log(recsFetchData);
-		this.props.fetchData('127.0.0.1:8666/api/dict');
+
+	componentDidMount() {
+		this.props.fetchData('http://127.0.0.1:8888/api/dict');
 	}
 
 	render() {
@@ -19,9 +19,9 @@ export class Dict extends Component {
 		}
 
 		if (this.props.isLoading) {
-			return <p> Please Loading Wait </p>
+			return <p> Just a sec </p>
 		}
-
+		
 		return (
 			<div>
 				<SearchRecForm />
@@ -29,7 +29,6 @@ export class Dict extends Component {
 				<Details />
 			</div>
 		);
-
 	}
 }
 
@@ -39,18 +38,18 @@ Dict.propTypes = {
 	hasErrored: PropTypes.bool,
 	isLoading: PropTypes.bool
 
-};
+}
 
 const mapStateToProps = (state) => {
 	return {
-		recs: state.recs,
+		recs: state.recsFetchDataSuccess,
 		hasErrored: state.recsHasErrored,
 		isLoading: state.recsIsLoading
 	}
-};
+}
 
 const mapDispatchToProps = (dispatch) => ({
 	fetchData: (uri) => dispatch(recsFetchData(uri))
-});
+})
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dict);
