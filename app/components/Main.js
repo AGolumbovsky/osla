@@ -2,7 +2,7 @@
 import React, { Component } from 'react';
 import Nav from 'Nav';
 
-const Main = (props) => {
+export const Main = (props) => {
 
         return (
             <div>
@@ -16,4 +16,3 @@ const Main = (props) => {
         );
     };
     
-module.exports = Main;

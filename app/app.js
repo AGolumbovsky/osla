@@ -7,10 +7,10 @@ import thunk from 'redux-thunk';
 import reducers from './reducers';
 
 // require local modules
-import Main from 'Main';
-import Dict from 'Dict';
-import AddRec from 'AddRec';
-import Grammar from 'Grammar';
+import Main from './components/Main';
+import Dict from './components/Dict';
+import AddRec from './components/AddRec';
+import Grammar from './components/Grammar';
 
 const middleware = [thunk];
 const createStoreWithMiddleware = applyMiddleware(...middleware)(createStore);
@@ -24,17 +24,13 @@ import'style!css!sass!applicationStyles';
 
 ReactDOM.render(
   <Provider store={store}>
-
     <Router history={hashHistory}>
       <Route path="/" component={Main}>
-
         <IndexRoute component={Dict}/>
         <Route path="addWord" component={AddRec}/>
   	    <Route path="grammar" component={Grammar}/>
-
       </Route>
     </Router>
-
   </Provider>,
 
   document.getElementById('app')

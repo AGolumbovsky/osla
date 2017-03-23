@@ -96,5 +96,5 @@ export const SearchRecForm = (props) => {
 }
 
 export default reduxForm({
-  form: 'searchRec'  // a unique identifier for this form
+  form: 'searchRecForm'  // a unique identifier for this form
 })(SearchRecForm)

@@ -1,14 +1,15 @@
 import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
-import RecList from 'RecList';
 import SearchRecForm from 'SearchRecForm';
+import RecList from 'RecList';
 import Details from 'Details';
-// import { recsFetchData };
+import { recsFetchData } from '../actions';
 
 export class Dict extends Component {
-	componentDidMount() {
-		this.props.fetchData('./api/dict');
+	componentWillMount() {
+		console.log(recsFetchData);
+		this.props.fetchData('127.0.0.1:8666/api/dict');
 	}
 
 	render() {
@@ -48,10 +49,8 @@ const mapStateToProps = (state) => {
 	}
 };
 
-const mapDispatchToProps = (dispatch) => {
-	return {
-		fetchData: (uri) => dispatch(recsFetchData(uri))
-	}
-};
+const mapDispatchToProps = (dispatch) => ({
+	fetchData: (uri) => dispatch(recsFetchData(uri))
+});
 
-export default connect(mapStateToProps, mapDispatchToProps)(RecList);
+export default connect(mapStateToProps, mapDispatchToProps)(Dict);

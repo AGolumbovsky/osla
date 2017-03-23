@@ -23,8 +23,8 @@ export class RecList extends Component {
 
 }
 
-const mapStateToProps = (reduxState) => ({
-	recs: reduxState.recs
+const mapStateToProps = (state) => ({
+	recs: state.recs
 })
 
 export default connect(mapStateToProps)(RecList)

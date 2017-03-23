@@ -1,4 +1,3 @@
-const INIT_STATE =  [{word: "nada to see here", description: "descripshn"}, {id: 999}];
 
 import * as c from 'actionTypes';
 
@@ -20,10 +19,11 @@ export const recsHasErrored = (state = false, action) => {
 	}
 }
 
-export const recs = (state = INIT_STATE, action) => {
+export const recs = (state = [{word: "test_deflt"}, {id: 999}], action) => {
 	switch (action.type) {
 		case c.RECS_FETCH_DATA_SUCCESS:
-			return action.recs;
+			// return action.recs;
+			return [{"test": "test"}]
 		default:
 			return state;
 	}
