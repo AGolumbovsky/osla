@@ -28,9 +28,9 @@ export const recsFetchDataSuccess = (recs) => {
 	return (dispatch, getState) => {
 
 		const word = getState().word;
-		
+
 		fetch('https://osla.herokuapp.com/dict', {
-			method: 'GET', 
+			method: 'GET',
 			headers
 		})
 		.then((data) => data.json())
@@ -44,7 +44,7 @@ export const recsFetchDataSuccess = (recs) => {
 	}
 }*/
 
-export recsFetchData = (uri) => {
+export const recsFetchData = (uri) => {
 
 	return (dispatch) => {
 		dispatch(recsIsLoading(true));
@@ -56,7 +56,6 @@ export recsFetchData = (uri) => {
 					throw Error(response.statusText);
 				}
 				dispatch(recsIsLoading(false));
-
 				return res;
 			})
 			.then((res) => res.json())
@@ -70,12 +69,12 @@ export const addRec = (rec) => {
 	return (dispatch, getState) => {
 		dispatch({
 			type: ADD_REC,
-			payload: record
+			rec
 		})
 	}
 }
 
-export const removeRec = (word) => ({
+export const removeRec = (rec) => ({
 	type: REMOVE_REC,
-	payload: word
+	rec
 })

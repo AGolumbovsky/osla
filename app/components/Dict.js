@@ -7,8 +7,8 @@ import Details from 'Details';
 // import { recsFetchData };
 
 export class Dict extends Component {
-	componentWillMount() {
-		this.props.fetchData('./api');
+	componentDidMount() {
+		this.props.fetchData('./api/dict');
 	}
 
 	render() {

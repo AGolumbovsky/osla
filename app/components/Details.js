@@ -1,7 +1,8 @@
-import React from 'react';
+import React, { Component } from 'react';
 
-var Details = React.createClass({
-	render: function() {
+export class Details extends Component {
+
+	render() {
 		var {id, word, description} = this.props;
 
 		return (
@@ -12,6 +13,4 @@ var Details = React.createClass({
 			</div>
 		);
 	}
-});
-
-module.exports = Details;
+};
