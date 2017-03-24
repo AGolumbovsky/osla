@@ -5,12 +5,11 @@ export default class SearchRecForm extends Component {
     onFormSubmit (e) {
         e.preventDefault();
 
-        var word = this.refs.searchText.value;
-        console.log("you looking for", word + "?");
+        var query = this.refs.searchText.value;
 
-        if(word.length > 0) {
+        if(query.length > 0) {
 
-            this.props.onSearch(word);
+            this.props.onSearch(query);
         }
     }
 
