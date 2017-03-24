@@ -7,10 +7,10 @@ import thunk from 'redux-thunk';
 import reducers from './reducers';
 
 // import local modules
-import Main from './components/Main';
-import Dict from './components/Dict';
-import AddRec from './components/AddRec';
-import Grammar from './components/Grammar';
+import Main from 'Main';
+import Dict from 'Dict';
+import AddRec from 'AddRec';
+import Grammar from 'Grammar';
 
 const middleware = [thunk];
 const createStoreWithMiddleware = applyMiddleware(...middleware)(createStore);
@@ -21,6 +21,8 @@ $(document).foundation();
 
 // app css
 import'style!css!sass!applicationStyles';
+
+console.log("value of Main in app.js is:", Main)
 
 ReactDOM.render(
   <Provider store={store}>

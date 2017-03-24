@@ -1,14 +1,9 @@
-var React = require('react');
-var { Link, IndexLink } = require('react-router');
+import React, { Component } from 'react';
+import { Link, IndexLink } from 'react-router';
 
-var Nav = React.createClass({
-    onSearch: function(e) {
-        e.preventDefault();
-        alert("keep calm and new year!!!");
-    },
+export const Nav = () => {
 
-    render: function() {
-        return(
+        return (
             <div className="top-bar">
                 <div className="top-bar-left">
                     <ul className="menu">
@@ -21,8 +16,5 @@ var Nav = React.createClass({
                     <a href="http://github.com/agolumbovsky/osla">see code</a>
                 </div>
             </div>
-        );
-    }
-});
-
-module.exports = Nav; 
+        )
+}

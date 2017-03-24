@@ -15,7 +15,7 @@ export class RecList extends Component {
 
 	render() {
 		return (
-			<ul>
+			<ul className="reclist">
 				{this.renderList()}
 			</ul>
 		)
