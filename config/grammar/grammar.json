@@ -3,7 +3,13 @@
 
 ["a", "i", "o", "e", "u", "l", "v", "n", "m", "s", "k", "r", "c", "t", "b", "p", "f", "g", "z", "x", "wildcard"]
 
+/*
 
+This is a first draft of the osla grammar, many parts are deprecated or expanded 
+Not to be used as reference 
+I would love to eat some grechka now, it would be lovely
+
+*/
 // main parts of speech
 
 {
@@ -12,14 +18,14 @@
 	"obiekta": "-a",
 
 	// state or adjective => what kind
-	"stata": "-iv",
+	"stata": "-e",
 
 	// function or verb => to do what
 	"funkcia": {
 
 		"presenta": "-al",
-		"pasta": "-alo",
-		"futura": "-ale"
+		"pasta": "-alo", // changed
+		"futura": "-ale" // changed
 
 	},		
 

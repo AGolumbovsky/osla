@@ -24,9 +24,13 @@ export class Dict extends Component {
 		
 		return (
 			<div>
-				<SearchRecForm />
-				<RecList />
-				<Details />
+				<div>
+					<SearchRecForm />
+					<RecList />
+				</div>
+				<div>
+					<Details />
+				</div>
 			</div>
 		);
 	}

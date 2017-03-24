@@ -6,7 +6,7 @@ import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
 import reducers from './reducers';
 
-// require local modules
+// import local modules
 import Main from './components/Main';
 import Dict from './components/Dict';
 import AddRec from './components/AddRec';

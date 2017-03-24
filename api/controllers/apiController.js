@@ -1,5 +1,5 @@
 var bodyParser = require('body-parser');
-var Word = require('../models/wordModel');
+var Rec = require('../models/recModel');
 
 module.exports = function(app) {
 
@@ -9,7 +9,7 @@ module.exports = function(app) {
     // get ALL
     app.get('/api/dict', function(req, res) {
 
-        Word.find({}, function(err, data) {
+        Rec.find({}, function(err, data) {
 
             if (err) throw err;
 
@@ -22,7 +22,7 @@ module.exports = function(app) {
     // get one
     app.get('/api/dict/:word', function(req, res) {
 
-        Word.findOne({"spelling": req.params.spelling }, function(err, data) {
+        Rec.findOne({"word": req.params.word }, function(err, data) {
 
             if(err) throw err;
 
@@ -35,15 +35,15 @@ module.exports = function(app) {
     // post to db
     app.post('/api/add', function(req, res) {
      
-        var newWord = new Word({
+        var newRec = new Rec({
 
-            spelling: req.body.spelling,
+            word: req.body.word,
             partSp: req.body.partSp, 
             description: req.body.description
 
         });
 
-        newWord.save(function(err, data) {
+        newRec.save(function(err, data) {
 
             if(err) throw err;
 
@@ -58,17 +58,19 @@ module.exports = function(app) {
 
         // to remember the info for the farewell message
         // do it differently
-        var allThatsLeftOfIt = req.body.thing;
+        var allThatsLeftOfIt = req.body.word;
 
-        Word.find({ "wordspelling": req.body.word }).remove(function(err) {
+       
+
+        Rec.find({ "word": req.body.word }).remove(function(err) {
 
             if(err) throw err;
 
             res.send("it is no more");
             console.log("Is this what you wanted? I removed " + allThatsLeftOfIt);
-
         });
+        
 
-    });
+    })
 
-};
+}

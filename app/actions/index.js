@@ -48,8 +48,6 @@ export const recsFetchData = (uri) => {
 
 	return (dispatch) => {
 		dispatch(recsIsLoading(true));
-		console.log("recsFetchData is working")
-
 		fetch(uri)
 			.then((res) => {
 				if(!res.ok) {

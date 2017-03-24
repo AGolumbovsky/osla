@@ -4,7 +4,7 @@ var mongoose = require('mongoose');
 
 // require local modules
 var apiController = require('./api/controllers/apiController');
-var Dict = require('./api/models/wordModel');
+var Dict = require('./api/models/recModel');
 
 // initialize app
 var app = express();

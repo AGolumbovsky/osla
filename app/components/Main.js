@@ -4,6 +4,7 @@ import Nav from 'Nav';
 
 export const Main = (props) => {
 
+        {console.log("props.children in Main: ", props.children)}
         return (
             <div>
                 <Nav/>
