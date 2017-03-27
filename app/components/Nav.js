@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
 import { Link, IndexLink } from 'react-router';
 
-export const Nav = () => {
+export default class Nav extends Component {
 
+    render () {
         return (
             <div className="top-bar">
                 <div className="top-bar-left">
@@ -17,4 +18,5 @@ export const Nav = () => {
                 </div>
             </div>
         )
+    }
 }
