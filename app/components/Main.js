@@ -6,7 +6,7 @@ export default class Main extends Component {
 
    // console.log("Value of Nav in Main.js is:", Nav)
     // console.log("Value of props.children in Main.js is:", this.props.children)
-    render(props) {
+    render() {
 
     return (
         <div>
