@@ -1,3 +1,19 @@
-.dict {
+.main-container {
+    display: flex;
+    flex-direction: row;
+}
+.pane-right {
     background-color: $blue;
+    display: flex;
+    justify-content: top;
+    flex-direction: column;
+    
+}
+
+.pane-left {
+    background-color: $grey;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
 }

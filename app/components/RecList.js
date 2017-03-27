@@ -7,8 +7,8 @@ export class RecList extends Component {
 		const { recs } = this.props;
 		return recs.map((rec) => (
 			<li	key={rec._id}>
-				<h4> { rec.word } </h4>
-				<h5> { rec.description } </h5>
+				<h5> { rec.word } </h5>
+				<h6> { rec.description } </h6>
 			</li>
 		))
 	}
