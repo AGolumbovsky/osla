@@ -1,6 +1,7 @@
 import * as c from 'actionTypes';
 
 
+
 export const recsIsLoading = (bool) => {
 	return {
 		type: c.RECS_IS_LOADING,
@@ -23,27 +24,6 @@ export const recsFetchDataSuccess = (recs) => {
 	}
 }
 
-
-/*export const findRecord = (word) => {
-	return (dispatch, getState) => {
-
-		const word = getState().word;
-
-		fetch('https://osla.herokuapp.com/dict', {
-			method: 'GET',
-			headers
-		})
-		.then((data) => data.json())
-		.then(({word}) => {
-			dispatch({
-				type: FIND_RECORD,
-				payload: word
-			})
-		})
-
-	}
-}*/
-
 export const recsFetchData = (uri) => {
 
 	return (dispatch) => {
@@ -62,8 +42,16 @@ export const recsFetchData = (uri) => {
 	}
 }
 
-export const addRec = (rec) => {
+export const displayRec = (rec) => {
+	return (dispatch) => {
+		dispatch({
+			type: c.REC_ACTIVE,
+			rec
+		})
+	}
+}
 
+export const addRec = (rec) => {
 	return (dispatch, getState) => {
 		dispatch({
 			type: ADD_REC,

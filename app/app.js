@@ -23,8 +23,6 @@ $(document).foundation();
 // app css
 import'style!css!sass!applicationStyles';
 
-console.log("value of Main in app.js is:", Main)
-
 ReactDOM.render(
   <Provider store={store}>
     <Router history={browserHistory}>

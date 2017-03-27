@@ -27,3 +27,12 @@ export const recs = (state = [{word: "test_deflt"}, {id: 999}], action) => {
 			return state;
 	}
 }
+
+export const activeRec = (state = {word: "Select a word"}, action) => {
+	switch (action.type) {
+		case c.REC_ACTIVE:
+			return action.recs
+		default:
+			return state
+	}
+}

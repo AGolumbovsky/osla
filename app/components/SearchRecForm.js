@@ -5,11 +5,12 @@ export default class SearchRecForm extends Component {
     onFormSubmit (e) {
         e.preventDefault();
 
-        var query = this.refs.searchText.value;
+        var query = document.getElementById("searchText").value;
 
         if(query.length > 0) {
 
-            this.props.onSearch(query);
+            // this.props.onSearch(query);
+            console.log("value of this. is:", this);
         }
     }
 
@@ -17,7 +18,7 @@ export default class SearchRecForm extends Component {
         return(
             <div>
                 <form onSubmit={this.onFormSubmit}>
-                    <input type="search" ref="searchText" placeholder="Enter word"/>
+                    <input type="search" ref="searchText" id="searchText" placeholder="Enter word"/>
                     <button className="button expanded hollow"> Find </button>
                 </form>
             </div>
