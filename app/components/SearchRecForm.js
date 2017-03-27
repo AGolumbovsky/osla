@@ -17,8 +17,8 @@ export default class SearchRecForm extends Component {
         return(
             <div>
                 <form onSubmit={this.onFormSubmit}>
-                    <input type="search" ref="searchText" placeholder="Enter word" onChange={this.handleSearchChange}/>
-                    <button className="button expanded hollow"> Find in Dictionary </button>
+                    <input type="search" ref="searchText" placeholder="Enter word"/>
+                    <button className="button expanded hollow"> Find </button>
                 </form>
             </div>
         );

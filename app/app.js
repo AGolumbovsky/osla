@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { Route, Router, IndexRoute, hashHistory } from 'react-router';
+import { Route, Router, IndexRoute, hashHistory, browserHistory } from 'react-router';
 import { Provider } from 'react-redux';
 import { createStore, applyMiddleware } from 'redux';
 import thunk from 'redux-thunk';
@@ -11,6 +11,7 @@ import Main from 'Main';
 import Dict from 'Dict';
 import AddRec from 'AddRec';
 import Grammar from 'Grammar';
+import Details from 'Details';
 
 const middleware = [thunk];
 const createStoreWithMiddleware = applyMiddleware(...middleware)(createStore);
@@ -26,7 +27,7 @@ console.log("value of Main in app.js is:", Main)
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={hashHistory}>
+    <Router history={browserHistory}>
       <Route path="/" component={Main}>
         <IndexRoute component={Dict}/>
         <Route path="addWord" component={AddRec}/>
