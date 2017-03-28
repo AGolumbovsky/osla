@@ -1,7 +1,5 @@
 import * as c from 'actionTypes';
 
-
-
 export const recsIsLoading = (bool) => {
 	return {
 		type: c.RECS_IS_LOADING,
@@ -25,7 +23,6 @@ export const recsFetchDataSuccess = (recs) => {
 }
 
 export const recsFetchData = (uri) => {
-
 	return (dispatch) => {
 		dispatch(recsIsLoading(true));
 		fetch(uri)
@@ -42,12 +39,24 @@ export const recsFetchData = (uri) => {
 	}
 }
 
-export const displayRec = (rec) => {
+export const findRec = (queryStr) => {
 	return (dispatch) => {
-		dispatch({
+		fetch(queryStr)
+			.then((res) => {
+				if(!res.ok){
+					throw Error(res.statusText);
+				}
+				return res;
+			})
+			.then((res) => res.json())
+			.then((rec) => dispatch(recActive(rec)))
+	}
+}
+
+export const recActive = (rec) => {
+	return {
 			type: c.REC_ACTIVE,
 			rec
-		})
 	}
 }
 
@@ -60,7 +69,3 @@ export const addRec = (rec) => {
 	}
 }
 
-export const removeRec = (rec) => ({
-	type: REMOVE_REC,
-	rec
-})

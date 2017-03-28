@@ -3,10 +3,12 @@
     flex-direction: row;
 }
 .pane-right {
-    background-color: $blue;
+    background-color: $grey;
     display: flex;
     justify-content: top;
     flex-direction: column;
+    border: solid  1px $blue;
+    margin-left: 5px;
     
 }
 

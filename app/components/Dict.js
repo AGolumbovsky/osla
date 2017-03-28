@@ -9,7 +9,7 @@ import { recsFetchData } from '../actions';
 export class Dict extends Component {
 
 	componentDidMount() {
-		this.props.fetchData('http://127.0.0.1:8888/api/dict');
+		this.props.fetchAll('http://127.0.0.1:8888/api/dict');
 	}
 
 	render() {
@@ -48,12 +48,13 @@ const mapStateToProps = (state) => {
 	return {
 		recs: state.recsFetchDataSuccess,
 		hasErrored: state.recsHasErrored,
-		isLoading: state.recsIsLoading
+		isLoading: state.recsIsLoading,
+		rec: state.recActive
 	}
 }
 
 const mapDispatchToProps = (dispatch) => ({
-	fetchData: (uri) => dispatch(recsFetchData(uri))
+	fetchAll: (uri) => dispatch(recsFetchData(uri))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dict);

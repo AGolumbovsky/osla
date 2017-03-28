@@ -1,18 +1,33 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
-export default class Details extends Component {
+export class Details extends Component {
 
-	render() {
-		var {id, word, description} = this.props;
+	renderDetails = () => {
+		var { rec } = this.props;
 
-		console.log("this is this.props:", this.props)
+		console.log("this.props.rec in Details:", rec)
 
 		return (
 			<div>
-				id: "tooLong"
-				Word: {word}
-				Description: {description}
+				
+				<h5>id: "tooLong" </h5>
+				<h4>Word: {rec.word} </h4>
+				<h6>Description: {rec.description}</h6>
+				
 			</div>
 		);
 	}
-};
+
+	render() {
+		return (
+		<div> { this.renderDetails() } </div>
+		)
+	}
+}
+
+const mapStateToProps = (state) => ({
+	rec: state.recActive
+})
+
+export default connect(mapStateToProps)(Details)
