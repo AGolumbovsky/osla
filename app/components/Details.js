@@ -12,7 +12,7 @@ export class Details extends Component {
 			<div>
 				
 				<h5>id: "tooLong" </h5>
-				<h4>Word: {rec.word} </h4>
+				<h3>Word: {rec.word} </h3>
 				<h6>Description: {rec.description}</h6>
 				
 			</div>
