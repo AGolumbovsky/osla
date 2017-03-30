@@ -13,4 +13,4 @@ export class AddRec extends Component {
             </div>
         )
     }
-};
+}

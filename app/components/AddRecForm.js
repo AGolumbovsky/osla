@@ -1,9 +1,12 @@
-import React from 'react';
+import React, { Component } from 'react';
+import { connect } from 'react-redux';
 
 import AddRec from 'AddRec';
+import Details from 'Details';
 
-var AddRecForm = React.createClass({
-    handleSubmit: function(e) {
+export class AddRecForm extends Component {
+
+    handleSubmit (e) {
         e.preventDefault();
         var word = this.refs.word.value;
 
@@ -14,9 +17,9 @@ var AddRecForm = React.createClass({
         else {
             this.refs.word.focus();
         }
-    },
+    }
      
-    render: function() {
+    render () {
         return (
             <div>
                 <form onSubmit={this.handleSubmit}>
@@ -26,6 +29,4 @@ var AddRecForm = React.createClass({
             </div>
         );
     }
-});
-
-module.exports = AddRecForm;
+}
