@@ -25,10 +25,10 @@ import'style!css!sass!applicationStyles';
 
 ReactDOM.render(
   <Provider store={store}>
-    <Router history={browserHistory}>
+    <Router history={hashHistory}>
       <Route path="/" component={Main}>
         <IndexRoute component={Dict}/>
-        <Route path="addWord" component={AddRec}/>
+        <Route path="addword" component={AddRec}/>
   	    <Route path="grammar" component={Grammar}/>
       </Route>
     </Router>
