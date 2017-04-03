@@ -5,19 +5,19 @@ import { connect } from 'react-redux';
 // import Details from 'Details';
 import { something } from '../actions';
 
-export default class AddRecForm extends Component {
+export class AddRecForm extends Component {
 
     handleSubmit (e) {
         e.preventDefault();
         var query = document.getElementById("addText").value;
+        console.log('AddRecForm query is:', query)
 
-        if(query.length > 0) {
-            this.refs.word.value = '';
-            this.props.onAddWord(word);
+        if(query.length < 1) {
+            alert("Dude, c'mon...");
         }
-        else {
-            this.refs.word.focus();
-        }
+        var queryStr = "http://127.0.0.1:8888/api/add" + query;
+        console.log("query string is:", queryStr);
+        this.props.addRec(queryStr)
     }
      
     render () {
@@ -31,3 +31,13 @@ export default class AddRecForm extends Component {
         );
     }
 }
+
+const mapStateToProps = (state) => ({
+    rec: state.rec
+})
+
+const mapDispatchToProps = (disatch) => ({
+    addRec: (queryStr) => dispatch(addRec(queryStr))
+})
+
+export default connect (mapStateToProps, mapDispatchToProps)(AddRecForm)
