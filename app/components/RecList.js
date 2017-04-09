@@ -27,4 +27,5 @@ const mapStateToProps = (state) => ({
 	recs: state.recs
 })
 
+
 export default connect(mapStateToProps)(RecList)

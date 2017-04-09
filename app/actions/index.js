@@ -60,10 +60,10 @@ export const recActive = (rec) => {
 	}
 }
 
-export const addRec = (rec) => {
+export const postRec = (rec) => {
 	return (dispatch, getState) => {
 		dispatch({
-			type: ADD_REC,
+			type: POST_REC,
 			rec
 		})
 	}

@@ -58,11 +58,9 @@ module.exports = function(app) {
 
         // to remember the info for the farewell message
         // do it differently
-        var allThatsLeftOfIt = req.body.word;
+        var allThatsLeftOfIt = res.body.word;
 
-       
-
-        Rec.find({ "word": req.body.word }).remove(function(err) {
+        Rec.find({ "word": res.body.word }).remove(function(err) {
 
             if(err) throw err;
 

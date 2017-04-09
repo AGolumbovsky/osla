@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 // import AddRec from 'AddRec';
 // import Details from 'Details';
-import { something } from '../actions';
+import { postRec } from '../actions';
 
 export class AddRecForm extends Component {
 
@@ -15,7 +15,7 @@ export class AddRecForm extends Component {
         if(query.length < 1) {
             alert("Dude, c'mon...");
         }
-        var queryStr = "http://127.0.0.1:8888/api/add" + query;
+        var queryStr = "http://127.0.0.1:8888/api/" + query;
         console.log("query string is:", queryStr);
         this.props.addRec(queryStr)
     }
@@ -32,12 +32,12 @@ export class AddRecForm extends Component {
     }
 }
 
-const mapStateToProps = (state) => ({
+/*const mapStateToProps = (state) => ({
     rec: state.rec
 })
 
 const mapDispatchToProps = (disatch) => ({
-    addRec: (queryStr) => dispatch(addRec(queryStr))
+    addRec: (queryStr) => dispatch(postRec(queryStr))
 })
 
-export default connect (mapStateToProps, mapDispatchToProps)(AddRecForm)
+export default connect (mapStateToProps, mapDispatchToProps)(AddRecForm)*/
