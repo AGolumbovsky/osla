@@ -71,4 +71,14 @@ module.exports = function(app) {
 
     })
 
+    // delete ALL
+    // no practical use and very dangerous. Here to help with dev
+    app.delete('/api/kill', function(req, res) {
+        Rec.find({}).remove(function(err) {
+            if (err) throw err;
+
+            res.send("scorched earth")
+        })
+    })
+
 }

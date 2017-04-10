@@ -8,8 +8,8 @@ export class RecList extends Component {
 		return recs.map((rec) => (
 			<li	key={rec._id} className="listItem">
 				<h5> { rec.word } </h5>
-				<h6> { rec.description } </h6>
-			</li>
+				{/*<h6> { rec.description } </h6>
+*/}			</li>
 		))
 	}
 
