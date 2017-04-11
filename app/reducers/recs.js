@@ -41,7 +41,7 @@ export const postRec = (state = {word: "NOT_GREAT_SUCCESS!!!"}, action) => {
 	switch (action.type) {
 		case c.POST_REC:
 			return action.rec
-		default: 
+		default:
 			return state
 	}
 }

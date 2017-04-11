@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 import SearchRecForm from 'SearchRecForm';
 import RecList from 'RecList';
-import Details from 'Details';
+import { Details } from 'Details';
 import { recsFetchData } from '../actions';
 
 export class Dict extends Component {
@@ -29,7 +29,7 @@ export class Dict extends Component {
 					<RecList />
 				</div>
 				<div className="pane-right">
-					<Details />
+					<Details rec={rec}/>
 				</div>
 			</div>
 		);
@@ -54,7 +54,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-	fetchAll: (uri) => dispatch(recsFetchData(uri))
+	fetchAll: (uri) => dispatch(recsFetchData(uri)),
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(Dict);

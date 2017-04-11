@@ -3,10 +3,11 @@ import { connect } from 'react-redux';
 
 export class Details extends Component {
 
-	renderDetails = () => {
-		var { rec } = this.props;
+	renderDetails(props) {
+		// var { rec } = props;
 
-		console.log("this.props.rec in Details:", rec)
+		console.log("value of props in Details:", props)
+		console.log("value of rec in Details:", rec) // this renders too many times
 
 		return (
 			<div>
@@ -26,8 +27,9 @@ export class Details extends Component {
 	}
 }
 
-const mapStateToProps = (state) => ({
+/*const mapStateToProps = (state) => ({
 	rec: state.recActive
 })
 
 export default connect(mapStateToProps)(Details)
+*/

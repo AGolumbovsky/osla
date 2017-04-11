@@ -2,8 +2,8 @@ import React, { Component, PropTypes } from 'react';
 import { connect } from 'react-redux';
 
 import { AddRecForm } from 'AddRecForm';
-import Details from 'Details';
-import { addRec } from '../actions';
+import { Details } from 'Details';
+import { postRec } from '../actions';
 
 export class AddRec extends Component {
     render() {
@@ -13,7 +13,7 @@ export class AddRec extends Component {
                     <AddRecForm addRec="addRec"/>
                 </div>
                 <div className="pane-right">
-                    <Details/>
+                    <Details />
                 </div>
             </div>
         )
