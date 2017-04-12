@@ -7,8 +7,8 @@
     display: flex;
     justify-content: top;
     flex-direction: column;
-    border: solid  1px $blue;
-    margin-left: 5px;
+    border: solid  1px $dark-blue;
+    margin-left: 2px;
     
 }
 
@@ -18,4 +18,5 @@
     justify-content: center;
     flex-direction: column;
     text-align: center;
+    border: solid 1px $dark-blue;
 }

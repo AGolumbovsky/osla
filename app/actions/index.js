@@ -60,7 +60,7 @@ export const recActive = (rec) => {
 	}
 }
 
-export const postRec = (rec) => {
+export const postRec = (uri, {}) => {
 	return {
 			type: c.POST_REC,
 			rec

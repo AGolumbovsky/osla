@@ -9,8 +9,6 @@ export class RecList extends Component {
 		const { recs } = this.props;
 		return recs.map((rec) => (
 			<li	key={rec.word} className="listItem">
-				{/*<h5> { rec.word } </h5>*/}
-				{/*<h6> { rec.description } </h6>*/}
 				<ListItem word={rec.word}/>
 			</li>
 		))

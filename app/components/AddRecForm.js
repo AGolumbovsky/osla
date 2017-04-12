@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 
 // import AddRec from 'AddRec';
 // import Details from 'Details';
-import { postRec } from '../actions';
+// import { postRec } from '../actions';
 
 export class AddRecForm extends Component {
 
