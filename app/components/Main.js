@@ -10,7 +10,7 @@ export default class Main extends Component {
         <div>
             <Nav />
             <div className="row">
-                <div className="small-centered large-centered columns">
+                <div className="small-centered large-centered column">
                     {this.props.children}
                 </div>
             </div>
