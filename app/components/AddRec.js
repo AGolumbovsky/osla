@@ -10,10 +10,10 @@ export class AddRec extends Component {
         return (
             <div className="main-container">
                 <div className="pane-left">
-                    <AddRecForm addRec="addRec"/>
+                    <AddRecForm addRec={this.props.addRec}/>
                 </div>
                 <div className="pane-right">
-                    <Details />
+                    <Details rec={this.props.rec}/>
                 </div>
             </div>
         )
@@ -26,7 +26,7 @@ const mapStateToProps = (state) => {
     }
 }
 
-const mapDispatchToProps = (state) => ({
+const mapDispatchToProps = (dispatch) => ({
     addRec: (uri) => dispatch(postRec(uri))
 })
 

@@ -1,6 +1,6 @@
 import { combineReducers } from 'redux';
 
-import { recs, recsHasErrored, recsIsLoading, recActive, postRec } from 'recs'
+import { recs, recsHasErrored, recsIsLoading, recActive, postRec } from 'recsReducer'
 
 
 export default combineReducers({

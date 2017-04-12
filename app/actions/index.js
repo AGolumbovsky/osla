@@ -61,11 +61,9 @@ export const recActive = (rec) => {
 }
 
 export const postRec = (rec) => {
-	return (dispatch, getState) => {
-		dispatch({
+	return {
 			type: POST_REC,
 			rec
-		})
 	}
 }
 

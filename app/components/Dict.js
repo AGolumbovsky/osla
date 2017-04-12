@@ -29,7 +29,7 @@ export class Dict extends Component {
 					<RecList />
 				</div>
 				<div className="pane-right">
-					<Details rec={rec}/>
+					<Details rec={this.props.rec}/>
 				</div>
 			</div>
 		);

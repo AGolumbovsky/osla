@@ -3,10 +3,10 @@ import { connect } from 'react-redux';
 
 export class Details extends Component {
 
-	renderDetails(props) {
-		// var { rec } = props;
+	renderDetails() {
+		var rec = {} || props.rec;
 
-		console.log("value of props in Details:", props)
+		console.log("value of props in Details:", this.props)
 		console.log("value of rec in Details:", rec) // this renders too many times
 
 		return (
