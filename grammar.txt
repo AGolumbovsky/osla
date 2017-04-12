@@ -30,7 +30,7 @@ Grammar
 
 __Alphabet:
 
-a o i e u b v l n m s p f k r h z........ auxillary characters: x, y, c, j...........
+a o i e u b v g l n m s p f k r h z........ auxillary characters: x, y, c, j...........
 
 __Punctuation:
 

@@ -62,7 +62,7 @@ export const recActive = (rec) => {
 
 export const postRec = (rec) => {
 	return {
-			type: POST_REC,
+			type: c.POST_REC,
 			rec
 	}
 }

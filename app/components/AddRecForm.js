@@ -24,7 +24,25 @@ export class AddRecForm extends Component {
         return (
             <div>
                 <form onSubmit={this.handleSubmit.bind(this)}>
+                    <label>New Word</label>
                     <input type="text" ref="word" id="addText" placeholder="Enter the word to ass"/>
+                    <label> Select part of speech </label>
+                    <select>
+                        <option value="noun">Noun</option>
+                        <option value="varb">Verb</option>
+                        <option value="adjective">Adjective</option>
+                        <option value="adverb">Adverb</option>
+                        <option value="other">Other</option>
+                    </select>
+                    <label> Select chapter </label>
+                    <select>
+                        <option value="core">Core</option>
+                        <option value="en">EN</option>
+                        <option value="ru">RU</option>
+                        <option value="sci">Sci</option>
+                    </select>
+                    <label prompt="alalalalallf"> Provide description </label>
+                    <textarea name="description" rows="3" cols="30"/>
                     <button className="button expanded"> Add Word </button>
                 </form>
             </div>
