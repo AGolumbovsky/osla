@@ -3,14 +3,8 @@ var React = require('react');
 var Grammar = () => {
 	return (
 		<div> 
-			<h6>Give me a moment to figure it out </h6>
-			<article>
-				I don't know but I've been told, polozhil na vse ya bolt
-				...
-				var
-				[]
-				function
-			</article>
+			Just pretend here is a pretty placeholder picture...
+			{/*<img src={require('..app/img/stroika.jpg')} />*/}
 		</div>
 	);
 };

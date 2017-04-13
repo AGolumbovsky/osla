@@ -42,13 +42,13 @@ export const recsFetchData = (uri) => {
 export const findRec = (queryStr) => {
 	return (dispatch) => {
 		fetch(queryStr)
-			.then((res) => {
-				if(!res.ok){
-					throw Error(res.statusText);
+			.then((response) => {
+				if(!response.ok){
+					throw Error(response.statusText);
 				}
 				return res;
 			})
-			.then((res) => res.json())
+			.then((response) => response.json())
 			.then((rec) => dispatch(recActive(rec)))
 	}
 }
@@ -60,10 +60,24 @@ export const recActive = (rec) => {
 	}
 }
 
-export const postRec = (uri, {}) => {
+export const recPosted = (rec) => {
 	return {
-			type: c.POST_REC,
-			rec
+		type: c.REC_POSTED,
+		rec
 	}
 }
 
+export const postRec = (rec) => {
+	return (dispatch) => {
+		fetch('http://127.0.0.1:8888/api/add', { 
+			method: 'POST',
+			data: rec
+		})
+		.then((response) => response.json())
+		.then((body) => {
+			dispatch(recActive(rec))
+			dispatch(recPosted(rec))
+			console.log("the response.body is:", body);
+		});
+	}
+}

@@ -14,7 +14,7 @@ export class Details extends Component {
 				
 				<h2>{rec.word} </h2>
 				<h3> {rec.partSp || "Unknown"} </h3>
-				<h6> {rec.description} </h6>
+				<h6> {rec.description || "This word has no meaning"} </h6>
 				
 			</div>
 		);

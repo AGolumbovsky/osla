@@ -27,7 +27,7 @@ const mapStateToProps = (state) => {
 }
 
 const mapDispatchToProps = (dispatch) => ({
-    addRec: (uri) => dispatch(postRec(uri))
+    addRec: (rec) => dispatch(postRec(rec))
 })
 
 export default connect(mapStateToProps, mapDispatchToProps)(AddRec)

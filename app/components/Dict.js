@@ -9,7 +9,7 @@ import { recsFetchData } from '../actions';
 export class Dict extends Component {
 
 	componentDidMount() {
-		this.props.fetchAll('http://127.0.0.1:8888/api/dict');
+		this.props.fetchAll('http://osla.herokuapp.com/api/dict');
 	}
 
 	render() {
