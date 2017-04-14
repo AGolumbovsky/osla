@@ -69,6 +69,7 @@ export const recPosted = (rec) => {
 
 export const postRec = (rec) => {
 	return (dispatch) => {
+		console.log(rec);
 		fetch('http://127.0.0.1:8888/api/add', { 
 			method: 'POST',
 			data: rec
