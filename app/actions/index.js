@@ -69,17 +69,16 @@ export const recPosted = (rec) => {
 
 export const postRec = (rec) => {
 	return (dispatch) => {
-		console.log(rec);
+		console.log("rec in post req is:", rec);
 		fetch('http://127.0.0.1:8888/api/add', { 
 			method: 'POST',
 			data: rec
 		})
 		.then((response) => response.json())
-		.then((body) => {
-			console.log("response.body is:", body);
+		.then((data) => {
+			console.log("response.body is:", data);
 			dispatch(recActive(rec))
 			dispatch(recPosted(rec))
-			console.log("the response.body 2 is:", body);
 		});
 	}
 }
