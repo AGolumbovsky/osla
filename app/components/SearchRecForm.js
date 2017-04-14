@@ -15,7 +15,8 @@ export class SearchRecForm extends Component {
         if(query.length < 1) {
             alert("Lift a finger!")
         }
-        var queryStr = 'http://127.0.0.1:8888/api/dict/' + query; // why " ` " didn't work, i don't know
+        // var queryStr = 'http://127.0.0.1:8888/api/dict/' + query; // why " ` " didn't work, i don't know
+        var queryStr = 'http://osla.herokuapp.com/api/dict/' + query;
         console.log("queryStr is:", queryStr)
         this.props.fetchRec(queryStr)
     }

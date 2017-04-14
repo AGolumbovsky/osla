@@ -46,7 +46,7 @@ export const findRec = (queryStr) => {
 				if(!response.ok){
 					throw Error(response.statusText);
 				}
-				return res;
+				return response;
 			})
 			.then((response) => response.json())
 			.then((rec) => dispatch(recActive(rec)))
@@ -76,9 +76,10 @@ export const postRec = (rec) => {
 		})
 		.then((response) => response.json())
 		.then((body) => {
+			console.log("response.body is:", body);
 			dispatch(recActive(rec))
 			dispatch(recPosted(rec))
-			console.log("the response.body is:", body);
+			console.log("the response.body 2 is:", body);
 		});
 	}
 }
