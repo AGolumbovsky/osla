@@ -72,13 +72,29 @@ export const postRec = (rec) => {
 		console.log("rec in post req is:", rec);
 		fetch('http://127.0.0.1:8888/api/add', { 
 			method: 'POST',
-			data: rec
+			headers: {
+				'Accept': 'application/json',
+				'Content-Type': 'application/json'
+			},
+			body: JSON.stringify({})
 		})
 		.then((response) => response.json())
-		.then((data) => {
-			console.log("response.body is:", data);
+		.then((body) => {
+			console.log("response.body is:", body);
 			dispatch(recActive(rec))
 			dispatch(recPosted(rec))
 		});
 	}
 }
+
+fetch('https://mywebsite.com/endpoint/', {  
+  method: 'POST',
+  headers: {
+    'Accept': 'application/json',
+    'Content-Type': 'application/json',
+  },
+  body: JSON.stringify({
+    firstParam: 'yourValue',
+    secondParam: 'yourOtherValue',
+  })
+})
