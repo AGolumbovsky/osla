@@ -26,7 +26,7 @@ app.use(function (req, res, next) {
 // serve static files
 app.use(express.static(__dirname + '/public'));
 
-// not sure why but need it to get rid of warning
+// not sure why but need it to get rid of deprecation warning
 mongoose.Promise = global.Promise;
 
 // !!!! comes from *** heroku config --app osla | grep MONGODB_URI  ***
