@@ -1,13 +1,13 @@
 // require global modules
-var express = require('express');
-var mongoose = require('mongoose');
+const express = require('express');
+const mongoose = require('mongoose');
 
 // require local modules
-var apiController = require('./api/controllers/apiController');
-var Dict = require('./api/models/recModel');
+const apiController = require('./api/controllers/apiController');
+const Dict = require('./api/models/recModel');
 
 // initialize app
-var app = express();
+const app = express();
 
 // define port
 const PORT = process.env.PORT || 8888;
@@ -34,7 +34,7 @@ mongoose.connect('mongodb://heroku_618862tq:f0r1abdib4he2t56ij1v9qs10l@ds153637.
 // mongoose.connect('mongodb://127.0.0.1/dictDB');
 
 
-var db = mongoose.connection; // sam pridumal, nado proverit'
+const db = mongoose.connection; // sam pridumal, nado proverit'
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
