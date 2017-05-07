@@ -54,3 +54,5 @@ app.listen(PORT, function() {
 	console.log("osla express listening, port " + PORT + '/n' + timestamp);
 
 });
+
+let test = "test";
