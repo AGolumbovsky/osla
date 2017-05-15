@@ -1,8 +1,8 @@
-// require global modules
+// global modules
 const express = require('express');
 const mongoose = require('mongoose');
 
-// require local modules
+// local modules
 const apiController = require('./api/controllers/apiController');
 const Dict = require('./api/models/recModel');
 
