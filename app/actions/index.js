@@ -70,7 +70,7 @@ export const recPosted = (rec) => {
 export const postRec = (rec) => {
 	return (dispatch) => {
 		console.log("rec in post req is:", rec);
-		fetch('http://127.0.0.1:8888/api/add', { 
+		fetch('/api/add', { 
 			method: 'POST',
 			headers: {
 				'Accept': 'application/json',
@@ -87,7 +87,7 @@ export const postRec = (rec) => {
 	}
 }
 
-fetch('https://mywebsite.com/endpoint/', {  
+/*fetch('htt://127.0.0.1', {  
   method: 'POST',
   headers: {
     'Accept': 'application/json',
@@ -97,4 +97,4 @@ fetch('https://mywebsite.com/endpoint/', {
     firstParam: 'yourValue',
     secondParam: 'yourOtherValue',
   })
-})
+})*/
