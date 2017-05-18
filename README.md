@@ -6,7 +6,7 @@ Features:
 Uniform grammar
 Progressive complexity
 Core + local chapters + spec chapters
-Standardized spelling and pronunciation
+Standardized spelling and pronounciation
 Extensible vocabulary
 
 
@@ -61,9 +61,9 @@ All singular nouns(what) end with -a, all plural end with -i
 Stress is always on the *next to the last syllabus
 .okeana // ocean // pronounced okeAna
 
-All adjectives(which) end with -iv
+All adjectives(which) end with -e
 Stress is always on the last syllabus
-.boniv // good, beautiful whatever..
+.bone // good, beautiful whatever..
 
 All verbs(to do) end with -al
 .dal // to do, do
@@ -71,7 +71,7 @@ All verbs(to do) end with -al
 .dormal // to sleep, do/does sleep
 
 All adverbs(how) end with -o****
-.[ru]ohuienno // well
+.[Ru]ohuienno // well
 
 Pronouns (temporarily) are
 os // I 
@@ -87,7 +87,7 @@ un // under, below
 to // to, in the direction, pertaining
 ot // away, in the opposite direction
 
-onto // onto, on top of
+onto // onto, on top of, to the top
 into // into, inside
 onot // off, not on
 inot // out, out of, outside
@@ -95,7 +95,8 @@ unod // from below, underneath
 
 __Time:
 
-Time is relative to verbs
+Time is a characteristic of verbs
+** pending update
 -al is present, -alu is past, -ale is future
 .os dormal // i sleep
 .as dormalu // you slept
@@ -103,7 +104,7 @@ Time is relative to verbs
 
 gerund ends with -da -- doing or ba -- being
 .os dormalda // I am sleeping
-.as [lt]iratba // you are (Latin "iratus")angry
+.as [lt]iratba // you are (Latin "iratus")angry **note this is not an adjective but actually being angry vs "irate"
 
 __Not yet categorized:
 
@@ -124,10 +125,10 @@ ed // this
 __Exampes:
 
 .bona // beauty
-.boniv // beautiful
-.boniva // beautiful(person, thing) "hey, gorgeous"
-.bonivo // beautifully
-.bonel // to beautify, to embellish
+.bone // beautiful
+.bonea // beautiful(person, thing) "hey, gorgeous"
+.boneo // beautifully
+.bonel o bonal // to beautify, to embellish
 .bonela // embellishment, e.g. jewelry
 .bonelda // to be beautifying, to be embellishing
 .bonba // being beautiful
@@ -150,13 +151,3 @@ __Increasing Complexity:
 os ose(male), osa(female), osi(we), osai(we, girls)
 lef(left), lefa(left side, "leftity"), lefot(to the left from), lefto(to the left of)
 os(I, me), ost(to me, me), osit(us, to us), osait(us, to us, girls)
-
-
-
-
-
-
-
-
-
-
