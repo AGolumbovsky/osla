@@ -93,6 +93,8 @@ onot // off, not on
 inot // out, out of, outside
 unod // from below, underneath
 
+*** -t // indicated connection => of, -s
+
 __Time:
 
 Time is a characteristic of verbs
