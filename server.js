@@ -41,7 +41,7 @@ db.once('open', function() {
   console.log("db connected, mongoose did it");
 });
 
-// act like you have a clue
+// act like you have a clue about the argument
 apiController(app);
 
 // create a timestamp for nodemon
