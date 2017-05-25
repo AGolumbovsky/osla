@@ -12,13 +12,11 @@ export class AddRecForm extends Component {
 
         var rec = {
 
-            word: document.getElementById("word").value,
-            partSp: document.getElementById("partSp").value,
-            chapter: document.getElementById("chapter").value,
-            description: document.getElementById("description").value
+            word:           document.getElementById("word").value,
+            partSp:         document.getElementById("partSp").value,
+            chapter:        document.getElementById("chapter").value,
+            description:    document.getElementById("description").value
         }
-
-        console.log(rec);
 
         if(rec.word.length < 1) {
             alert("Dude, c'mon...");
