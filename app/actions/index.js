@@ -81,8 +81,9 @@ export const postRec = (rec) => {
 		.then((response) => response.json())
 		.then((body) => {
 			console.log("response.body is:", body);
-			dispatch(recActive(rec))
-			dispatch(recPosted(rec))
+			dispatch(recActive(rec));
+			dispatch(recPosted(rec));
+			dispatch(recsFetchData("api/dict"));
 		});
 	}
 }
