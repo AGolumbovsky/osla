@@ -34,7 +34,7 @@ mongoose.Promise = global.Promise;
 mongoose.connect('mongodb://127.0.0.1/dictDB');
 
 
-const db = mongoose.connection; // sam pridumal, nado proverit'
+const db = mongoose.connection;
 
 db.on('error', console.error.bind(console, 'connection error:'));
 db.once('open', function() {
