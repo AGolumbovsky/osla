@@ -14,7 +14,6 @@ export const recsHasErrored = (bool) => {
 	}
 }
 
-
 export const recsFetchDataSuccess = (recs) => {
 	return {
 		type: c.RECS_FETCH_DATA_SUCCESS,
@@ -50,6 +49,7 @@ export const findRec = (queryStr) => {
 			})
 			.then((response) => response.json())
 			.then((rec) => dispatch(recActive(rec)))
+			.catch(() => dispatch(recsHasErrored(true)));
 	}
 }
 
