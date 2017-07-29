@@ -1,4 +1,3 @@
-
 import * as c from 'actionTypes';
 
 export const recsIsLoading = (state = false, action) => {

@@ -55,8 +55,8 @@ export const findRec = (queryStr) => {
 
 export const recActive = (rec) => {
 	return {
-			type: c.REC_ACTIVE,
-			rec
+		type: c.REC_ACTIVE,
+		rec
 	}
 }
 
