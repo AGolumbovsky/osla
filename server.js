@@ -30,8 +30,8 @@ app.use(express.static(__dirname + '/public'));
 mongoose.Promise = global.Promise;
 
 // !!!! comes from *** heroku config --app osla | grep MONGODB_URI  ***
-// mongoose.connect('mongodb://heroku_618862tq:f0r1abdib4he2t56ij1v9qs10l@ds153637.mlab.com:53637/heroku_618862tq');
-mongoose.connect('mongodb://127.0.0.1/dictDB');
+mongoose.connect('mongodb://heroku_618862tq:f0r1abdib4he2t56ij1v9qs10l@ds153637.mlab.com:53637/heroku_618862tq');
+// mongoose.connect('mongodb://127.0.0.1/dictDB');
 
 
 const db = mongoose.connection;
