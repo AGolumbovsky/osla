@@ -25,7 +25,7 @@ export class SearchRecForm extends Component {
         return(
             <div>
                 <form onSubmit={this.onFormSubmit.bind(this)}>
-                    <input type="search" ref="searchText" id="searchText" placeholder="Enter word"/>
+                    <input type="search" ref="searchText" id="searchText" placeholder="Enter a word"/>
                     <button className="button expanded hollow"> Find </button>
                 </form>
             </div>

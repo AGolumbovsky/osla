@@ -76,7 +76,7 @@ export const postRec = (rec) => {
 				'Accept': 'application/json',
 				'Content-Type': 'application/json'
 			},
-			body: JSON.stringify({})
+			body: JSON.stringify(rec) // changed this july 29
 		})
 		.then((response) => response.json())
 		.then((body) => {
