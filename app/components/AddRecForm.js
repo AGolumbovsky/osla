@@ -30,7 +30,7 @@ export class AddRecForm extends Component {
             <div>
                 <form onSubmit={this.handleSubmit.bind(this)}>
                     <label>New Word</label>
-                    <input type="text" ref="word" id="word" placeholder="Enter the word to ass"/>
+                    <input type="text" ref="word" id="word" placeholder="Enter the word to add"/>
                     <label> Select part of speech </label>
                     <select id="partSp">
                         <option value="noun">Noun</option>

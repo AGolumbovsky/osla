@@ -11,5 +11,4 @@ export default class ListItem extends Component {
 			</div>
 		);
 	}
-
 }
