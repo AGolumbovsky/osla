@@ -60,7 +60,7 @@ module.exports = function(app) {
         // do it differently
         var allThatsLeftOfIt = res.body.word;
 
-        Rec.find({ "word": res.body.word }).remove(function(err) {
+        Rec.find({ "word": req.params.word }).remove(function(err) {
 
             if(err) throw err;
 
