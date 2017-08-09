@@ -34,7 +34,7 @@ export class AddRecForm extends Component {
                     <label> Select part of speech </label>
                     <select id="partSp">
                         <option value="noun">Noun</option>
-                        <option value="varb">Verb</option>
+                        <option value="verb">Verb</option>
                         <option value="adjective">Adjective</option>
                         <option value="adverb">Adverb</option>
                         <option value="other">Other</option>
