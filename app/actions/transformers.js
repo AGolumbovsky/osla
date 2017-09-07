@@ -1,9 +1,8 @@
 import * as c from 'actionTypes';
 
 export const transformNoun = (w) => {
-    return {
-        type: c.WORD_IS_NOUN,
-        w
+    return () => {
+        console.log("transformNoun in da house");
     }
 }
 
