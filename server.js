@@ -12,7 +12,7 @@ const app = express();
 // define port
 const PORT = process.env.PORT || 8888;
 
-// redirect to http
+// redirect to http from https
 // for heroku
 app.use(function (req, res, next) {
   if(req.headers['x-forwarded-proto'] === 'https') {
