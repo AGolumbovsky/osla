@@ -6,10 +6,8 @@ const mongoose = require('mongoose');
 const apiController = require('./api/controllers/apiController');
 const Dict = require('./api/models/recModel');
 
-// initialize app
 const app = express();
 
-// define port
 const PORT = process.env.PORT || 8888;
 
 // redirect to http from https
@@ -23,7 +21,6 @@ app.use(function (req, res, next) {
   }
 });
 
-// serve static files
 app.use(express.static(__dirname + '/public'));
 
 // not sure why but need it to get rid of deprecation warning
@@ -47,7 +44,6 @@ apiController(app);
 var currentDate = new Date();
 var timestamp = currentDate.getHours() + ":" + currentDate.getMinutes() + ":" + currentDate.getSeconds();
 
-// listen to port
 app.listen(PORT, function() {
 	
 	console.log("osla express listening, port " + PORT + '/n' + timestamp);
