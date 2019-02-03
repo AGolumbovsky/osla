@@ -1,8 +1,6 @@
-// global modules
 const express = require('express');
 const mongoose = require('mongoose');
 
-// local modules
 const apiController = require('./api/controllers/apiController');
 const Dict = require('./api/models/recModel');
 
@@ -37,7 +35,7 @@ db.once('open', function() {
   console.log("db connected, mongoose did it");
 });
 
-// act like you have a clue about the argument
+// how does this work
 apiController(app);
 
 // create a timestamp for nodemon
