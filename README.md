@@ -5,6 +5,7 @@ Features:
 
 Uniform grammar
 Progressive complexity
+Near 100% phonetic
 Core + local chapters + spec chapters
 Standardized spelling and pronounciation
 Extensible, modular vocabulary
